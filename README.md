@@ -26,5 +26,4 @@ Details on contribution will follow soon(tm).
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-under the GNU Lesser General Public License version 3 - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU Lesser General Public License version 3 - see the [LICENSE.md](LICENSE.md) file for details
