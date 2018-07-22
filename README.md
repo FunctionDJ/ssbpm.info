@@ -1,6 +1,6 @@
-# PM on PAL guide
+# PM on PAL Guide
 
-The premiere guide for installing Project M on a PAL (european) Nintendo Wii system.
+The premiere guide for installing [Project M](https://www.ssbwiki.com/Project_M) on a PAL (european) Nintendo Wii system.
 
 ## Getting Started
 
