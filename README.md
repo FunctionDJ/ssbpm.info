@@ -14,6 +14,7 @@ The premiere guide for installing [Project M](https://www.ssbwiki.com/Project_M)
 * [History.js](https://github.com/browserstate/history.js/) 1.8 (native.history.js)
 * [url()](https://github.com/websanova/js-url) 2.5.3
 * [Showdown](https://github.com/showdownjs/showdown) 1.8.6
+* [flag-icon-css](https://github.com/lipis/flag-icon-css) 3.1.0
 
 ## Contributing
 
