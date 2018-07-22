@@ -1,0 +1,68 @@
+{
+    "@metadata": {
+        "authors": [
+			"Thibaut Meyer"
+        ],
+        "last-updated": "2016-10-25",
+        "locale": "en"
+    },
+	
+	"topnav.home": "Guide",
+	"topnav.about": "Impressum",
+
+	"about.title": "Über diesen Guide",
+	"about.t1": "In diesem Guide lernst du, wie du einfach mit Hilfe von Softmodding die Brawl Mod Project M auf deiner PAL Wii spielen kannst. Hier sind ein paar nützliche Dinge, die dich vielleicht interessieren, bevor du loslegst:",
+	"about.l1": "Was ist Project M?",
+	"about.l2": "Wii Softmodding erklärt",
+	"about.l3": "Wii-Typen und ihre Unterschiede",
+	"about.l4": "PAL und NTSC erklärt",
+	"about.l5": "Häufig gestellte Fragen (F.A.Q.)",
+	
+	"disc.title": "Rechtsausschluss",
+	"disc.t1": "Die Autoren dieser Anleitung und die Ersteller der verwendeten Software können für Schäden an deiner Konsole nicht haftbar gemacht werden. Indem du diesen Guide benutzt, erklärst du dich damit einverstanden.",
+		
+	"rea.title": "Aber mach dir keine Sorgen",
+	"rea.t1": "Bevor du loslegst empfehlen wir dir, dass du dir einen Moment Zeit nimmst, einmal über den ganzen Guide drüber zu schauen, damit du nicht unerwartet irgendwann fest steckst (obwohl das hier sehr einfach für Leute ist, die damit etwas vertraut sind, ist es vielleicht nicht was für jeden). Denk daran, dass wenn du",
+	"rea.t2": "zu irgendeinem Zeitpunkt Probleme haben solltest",
+	"rea.t3": "haben wir",
+	"rea.l1": "zahlreiche Kontakte",
+	"rea.t4": "verlinkt, damit du schnell die Hilfe bekommst, die du brauchst. Bitte hab Geduld mit Helfern, da wir das alle freiwillig machen.",
+	"rea.t5": "Dein Kontakt auf Deutsch (und Englisch) ist",
+	"rea.l2": "contacts/waffeln/",
+	"rea.t6": "waffeln",
+	
+	"dif.title": "Schwierigkeit:",
+	"dif.t01": "Schwimmflügel",
+	"dif.t02": "Wenn du diesem Guide genau folgst und nichts überspringst, ist es fast unmöglich, dass du etwas richtig kaputt machen kannst. Diese Guide zeigt dir, wie man zwei sehr stabile und verlässliche",
+	"dif.t03": "Brick-Schutze",
+	"dif.t04": "installiert, sodass falls mal etwas schief gehen sollte, nichts verloren geht.",
+	"dif.t05": "Nachteile:",
+	"dif.t06": "Du gibst deine Garantie auf, aber da die letzten",
+	"dif.t07": "normalen Wiis",
+	"dif.t08": "in 2013 gebaut wurden und Nintendo normalerweise 12 Monate Garantie auf ihre Konsolen gibt, ist deine Garantie höchstwarscheinlich eh abgelaufen.",
+	"dif.t09": "Deine Wii verliert keinerlei Funktionalität.",
+	"dif.t10": "Vorteile:",
+	"dif.t11": "Du kannst Backups von Spielen auf USB Geräten und SD Karten erstellen und laden, Project M und andere Mods spielen, Emulatoren verwenden, zahlreiche",
+	"dif.t12": "Homebrew Apps",
+	"dif.t13": "verwenden und",
+	"dif.t14": "noch viel mehr!",
+	
+	"wyn.title": "Was du brauchst",
+	"wyn.t1": "oder",
+    "wyn.p01": "Es gibt unterschiedliche Wiis. Für diesen Guide brauchst du eine PAL Wii<br/><a href=&quot;wiki/wii-models/&quot;>Mehr Infos</a>",
+    "wyn.p02": "Du musst eine Wii Remote haben. Später im Guide zeigen wir dir, wie du mit Priiloader fast nie mehr eine Wii Remote brauchst.",
+    
+    
+    
+    "wyn.p03": "Don't forget this one: Without a Sensor Bar you can't navigate the Wii System Menu.",
+    "wyn.p04": "Minimum size: 1GB. There is no exact upper limit but since the Wii has issues with SDXC, we highly recommend to stick to SDHC and 32GB at most. Adapters do work.<br/><a href=&quot;http://www.wiibrew.org/wiki/SD/SDHC_Card_Compatibility_Tests&quot;>Compatibility list</a>",
+    "wyn.p05": "Minimum size: 8GB. Every type (USB 1, 2 or 3) is supported but USB 2 is optimal since it's a lot faster than 1 and the Wii doesn't have USB 3 ports so you won't benefit from extra speed. 8GB USB 2's sometimes go for only a few bucks or sometimes even advertisement gifts.",
+    "wyn.p06": "Same thing as with the USB Sticks (click USB Stick icon for the info) but for HDD's we recommend a max. 'physical size' of 2TB since making partitions beyond that becomes more complicated (but not impossible).",
+    "wyn.p07": "While any TV that works with your Wii also works with this guide (Yes, no matter if PAL or NTSC) we do recommend a CRT over a flatscreen / LCD TV because CRTs are typically faster in response time which makes for a more competitive and snappy experience. Some bad flatscreens can have display lag that is worse than Netplay.",
+    "wyn.p08": "Thanks to the cross-platform tools we have in this guide it doesn't matter if you're using Windows, Mac OS or Linux! Any tower PC / Desktop, Laptop or Netbook works. You only need internet and a USB port for your USB device.",
+    "wyn.p09": "If you don't have an internal SD Card reader you'll need an external one, typicall as a USB device. You can get these for a few bucks off of ebay but it might be easier for you to ask someone to use their computer if you don't have a reader.",
+    "wyn.p10": "Your typical built-in SD Card reader. Most Desktop PCs and Notebooks have this.",
+    "wyn.p11": "This is a special download package made exclusively for this guide. It saves you the hassle of having to download all the small things individually. Includes: Project M 3.6-mf, USB Loader GX, wbfs_file_2.9, Priiloader, d2x-cIOS Installer<br/><a href=&quot;https://www.google.com/&quot;>Download (coming soon)</a>",
+    "wyn.p12": "Since Project M is built on top of NTSC Brawl you need an ISO file of it. A PAL Brawl ISO file does not work.<br/><a href=&quot;https://www.google.com/&quot;>How to obtain (coming soon)</a>"
+
+}

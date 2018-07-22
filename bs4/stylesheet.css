@@ -1,0 +1,246 @@
+/* Declare usable PM color variables */
+/* Credit: https://color.adobe.com/Project-M-color-theme-7253209/ */
+:root {
+  --pm-white: #F1F0F1;
+  --pm-light: #2B357B;
+  --pm-violet: #16123E;
+  --pm-deep: #0D1026;
+  --pm-black: #0A0709;
+  
+  --pm-1: #F1F0F1;
+  --pm-2: #2B357B;
+  --pm-3: #16123E;
+  --pm-4: #0D1026;
+  --pm-5: #0A0709;
+}
+
+/* This marks all links that should have their href value
+   modified in order to account for the locale (like simulating a cookie) */
+/*a[href]:not([href^="http"]):not([href^="#"]) {
+  border: 3px var(--pm-2) dotted;
+}*/
+
+/* What you need image styles */
+#wyn img {
+  height: 5rem;
+  width: auto;
+}
+
+/* Spefic pill / badge scalings etc. */
+.badge-h3 {
+  margin-left: 1rem;
+  vertical-align: 30%;
+  font-size: 80%;
+}
+.badge-ol {
+  margin-left: 0.3rem;
+  vertical-align: 10%;
+  font-size: 60%;
+}
+
+/* For spefic items */
+.guide {
+  /* Makes the "Alternative" pill button lighter  */
+  background-color: rgba(100, 149, 237, 0.71);
+}
+
+/* Styles the progress bar */
+.progress {
+  background-color: rgba(148, 204, 138, 0.71);
+}
+
+/* Reduces padding of the left sidebar column because the nav adds it's own padding */
+#left-column {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Make sidebar move with the page (like Affix) */
+#index {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  padding: 0;
+}
+
+/* Fix sidebar href padding and add seperators */
+#index .nav-link {
+  border-bottom: #e7e9ff 1px solid;
+}
+
+/*  Apply PM colored background to things (like the navbar)
+    and certain stuff like .active class of left-hand nav items */
+#index .nav-link.active, .pm {
+  background-color: var(--pm-violet);
+}
+
+.pm > a {
+  color: var(--pm-white);
+}
+
+.dropdown-menu > a:hover, .dropdown-menu > a:focus {
+  background-color: var(--pm-light);
+  color: var(--pm-white);
+}
+
+/* Language dropdown menu stuff */
+.dropdown-menu {
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  box-shadow: 0 0rem 20px #0005;
+  z-index: 0 !important;
+  border-style: none;
+}
+/*
+.dropdown-menu-right {
+  box-shadow: 0 0rem 20px #0005;
+}
+*/
+.navbar {
+  z-index: 1 !important;
+}
+
+.dropdown-menu span {
+  height: 1.5rem;
+  width: 2rem;
+  vertical-align: middle;
+}
+
+.dropdown-menu .flag-icon {
+  border-radius: 0.3rem;
+  padding: 0;
+  margin: 0;
+  font-size: 5rem;
+}
+
+.dropdown-toggle > .flag-icon {
+  border-radius: 0.3rem;
+}
+
+.dropdown-toggle > span:not([class]) {
+  color: var(--pm-1);
+}
+
+.dropdown-menu span:not([class]) {
+  margin-left: 0.5rem;
+}
+
+.card-header {
+  text-align: left;
+  padding-bottom: 0;
+}
+
+.accordion {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* -------------- */
+
+.toplevel-list > li {
+  padding-top: 0.3em;
+}
+
+/* (Temporarily) add extra space to body in order to properly test scrollspy */
+body {
+  padding-bottom: 20rem;
+}
+
+/* Class for hiding chosen li's list styles */
+.us {
+  list-style-type: none;
+  background-image: url(https://www.iconsdb.com/icons/preview/royal-blue/info-xxl.png);
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  padding-left: 1.4rem;
+  margin-left: 0.5rem;
+  margin-top: 0.1em;
+  background-position: 0 0.46rem;
+}
+
+/* Hide sidebar subsections when not in the section */
+#index nav {
+  display: none;
+}
+#index a.active + nav {
+  display: block;
+}
+
+/* Only for mobile phones */
+@media (max-width: 575.98px) {
+
+  #mobile-locale-dropdown li {
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+  }
+  
+  #index {
+    display: none;
+  }
+
+  .toplevel-list {
+    padding-left: 1rem;
+    font-weight: 500;
+  }
+
+  .toplevel-list > li > ol {
+    font-weight: 400;
+    padding-left: 1em;
+  }
+  
+  .toplevel-list > li > ol > li {
+    margin-top: 0.3em;
+  }
+  
+  .toplevel-list > li > ol > li > ol {
+    /* Re-add bottom level padding */
+    padding-left: 1rem;
+  }
+}
+
+/* Only for everything bigger */
+@media (min-width: 576px) {
+  
+  .navbar {
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  li {
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+  }
+
+  section > ol > li {
+    padding-top: 0.4rem;
+  }
+
+  section > ol > li > span {
+    margin-bottom: 0.8rem;
+  }
+
+  section > ol > li > ol > li > ol {
+    padding: 0.2rem;
+    padding-left: 2rem;
+  }
+}
+
+/* Only when the navbar becomes minimal */
+@media (max-width: 991.98px) {
+  #mobile-locale-dropdown {
+    display: inline !important;
+  }
+  
+  .dropdown-menu {
+    top: 2rem;
+  }
+}
+
+/* Only when the navbar becomes desktop sized */
+@media (min-width: 992px) {
+  #desktop-locale-dropdown {
+    display: inline !important;
+  }
+}

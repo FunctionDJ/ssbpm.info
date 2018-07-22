@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Thibaut Meyer"
+		],
+		"last-updated": "2016-10-25",
+		"locale": "fr"
+	},
+	"home": "Tutoriel",
+	"about": "À propos",
+
+	"intro_title": "Introduction",
+	"whatyouneed_title": "Le nécessaire",
+	"softmod_title": "Softmod de la Wii",
+	"install_title": "Installation de Project M",
+	"optionalsteps_title": "Étapes optionnelles",
+	"troubleshooting_title": "Problèmes et solutions",
+
+	"intro_content": "frouze allo"
+}

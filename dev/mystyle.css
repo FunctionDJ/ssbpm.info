@@ -1,0 +1,149 @@
+body {
+  padding-top: 50px;
+}
+
+/* main content */
+.main-content {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+blockquote {
+	margin-top: 20px;
+	font-style: italic;
+}
+
+.row {
+	margin-bottom: 20px;
+}
+
+h1,h2,h3 {
+	color: #474747;
+}
+
+#wyn img {
+	height: 70px;
+	width: auto;
+}
+
+.wyn-text {
+	margin-left: 5px;
+	margin-right: 5px;
+}	
+
+.wyn-sep {
+	border-left: 2px solid #000;
+	border-color: #949494;
+	font-size: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+ol {
+    counter-reset: item;
+}
+ol li {
+    display: block;
+    position: relative;
+    font-size: 30px;
+    color: #474747;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ol li ol {
+    font-size: 17px;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+ol li ol li {
+    font-size: 15px;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+ol li:before {
+    content: counters(item, ".")".";
+    counter-increment: item;
+    position: absolute;
+    margin-right: 100%;
+    right: 10px; /* space between number and text */
+}
+
+/* sidebar */
+.bs-docs-sidebar {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* all links */
+.bs-docs-sidebar .nav>li>a {
+    color: #999;
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* nested links */
+.bs-docs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+}
+
+/* active & hover links */
+.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>li>a:hover, 
+.bs-docs-sidebar .nav>li>a:focus {
+    color: #563d7c;                 
+    text-decoration: none;          
+    background-color: transparent;  
+    border-left-color: #563d7c; 
+}
+/* all active links */
+.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>.active:hover>a,
+.bs-docs-sidebar .nav>.active:focus>a {
+    font-weight: 700;
+}
+/* nested active links */
+.bs-docs-sidebar .nav .nav>.active>a, 
+.bs-docs-sidebar .nav .nav>.active:hover>a,
+.bs-docs-sidebar .nav .nav>.active:focus>a {
+    font-weight: 500;
+}
+/* hide all (inactive) nested list */
+.bs-docs-sidebar .nav ul.nav {
+    display: none;           
+}
+/* show active nested list */
+.bs-docs-sidebar .nav>.active>ul.nav {
+    display: block;           
+}
+/* offset the anchor position so that content is not hidden behind header when following links  */ 
+:target:before {
+    content: "";
+    display: block;
+    height: 50px; /* fixed header height*/
+    margin: -50px 0 0; /* negative fixed header height */
+}
+
+/* i18n dropdown-menu icons  */
+.icon-small {
+    height:18px;
+    margin:0;
+	padding:0;
+}
+.icon-medium {
+    height:22px;
+	margin:0;
+	padding:0;
+}
+

@@ -1,0 +1,34 @@
+{
+  "@metadata": {
+    "authors": [
+      "waffeln"
+    ],
+    "last-updated": "2018-06-04",
+    "locale": "de"
+  },
+  "nb-title": "Project M Info",
+  "nb-home": "Startseite",
+  "nb-guide": "Guide",
+  "nb-faq": "F.A.Q.",
+  "nb-wiki": "Wiki",
+  "nb-wiki-pm": "Was ist Project M?",
+  "nb-wiki-sm": "Softmodding",
+  "nb-wiki-wm": "Wii Modelle / Typen",
+  "nb-wiki-ha": "Homebrew Apps",
+  "nb-wiki-bp": "Brick Schutz",
+  "nb-wiki-ex": "Exploits",
+  "nb-wiki-pn": "PAL & NTSC erklärt",
+  "nb-contacts": "Kontakte",
+  "nb-about": "Über",
+  "nb-soon": "Bald noch mehr",
+  
+  "sb-about": "**heyy**",
+  
+  "about-title": "Über diesen Guide",
+  "about-t1": "In this guide you will learn how to easily use softmodding to be able to play the Project M Brawl modification on your PAL Wii. Here are a few things you might be interested in before continuing:",
+  "about-l1": "What is Project M?",
+  "about-l2": "Softmodding a Wii explained",
+  "about-l3": "Types of Wiis and their differences",
+  "about-l4": "PAL and NTSC explained",
+  "about-l5": "Frequently asked questions (F.A.Q.)"
+}

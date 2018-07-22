@@ -1,0 +1,51 @@
+{
+  "@metadata": {
+    "authors": [
+      "waffeln"
+    ],
+    "last-updated": "2018-06-04",
+    "locale": "en"
+  },
+  
+  "nb-title": "Project M Info",
+  "nb-home": "Home",
+  "nb-guide": "Guide",
+  "nb-faq": "F.A.Q.",
+  "nb-wiki": "Wiki",
+  "nb-wiki-pm": "What is Project M?",
+  "nb-wiki-sm": "Softmodding",
+  "nb-wiki-wm": "Wii models / types",
+  "nb-wiki-ha": "Homebrew apps",
+  "nb-wiki-bp": "Brick protection",
+  "nb-wiki-ex": "Exploits",
+  "nb-wiki-pn": "PAL & NTSC explained",
+  "nb-contacts": "Contacts",
+  "nb-about": "About",
+  "nb-soon": "More coming soon",
+  
+  "about-title": "About this guide",
+  "about-t1": "In this guide you will learn how to easily use softmodding to be able to play the Project M Brawl modification on your PAL Wii. Here are a few things you might be interested in before continuing:",
+  "about-l1": "What is Project M?",
+  "about-l2": "Softmodding a Wii explained",
+  "about-l3": "Types of Wiis and their differences",
+  "about-l4": "PAL and NTSC explained",
+  "about-l5": "Frequently asked questions (F.A.Q.)",
+  
+  "dis.title": "Disclaimer",
+  "dis.t1": "The writers of this guide and the creators of the used software can **not** be held responsible for damage done to your console. By using this guide, you agree that it is on your own risk.",
+  
+  "rea.title": "Don't worry though",
+  "rea.t1": "Before you begin with this guide we recommend you take a moment to skim through the steps so you don’t get stuck being overwhelmed by the required steps (even though this is very easy for people who are familiar with this, it might not be for everyone). Keep in mind that if you’re having **trouble at any time** we have [numerous contacts](contacts/) linked so you can get the help you need quickly. Please be patient with helpers, as we’re all doing this voluntarily.\n\nYour first native speaker contact is [waffeln](contacts/waffeln/).",
+  
+  "dif.title": "Difficulty",
+  "wyn.title": "What you need",
+  "upd.title": "Updating your Wii",
+  "upd.ver.title": "Checking your version",
+  "upd.wif.title": "Setting up WiFi",
+  "upd.upd.title": "How to update",
+  "pre.title": "Preparing your devices",
+  "pre.mac.title": "Finding your MAC adress",
+  "pre.sd.title.short": "Preparing SD Card",
+  
+  "placeholder": ""
+}

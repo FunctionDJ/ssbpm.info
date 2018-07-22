@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name='revised' content='Monday, June 4th, 2018, 5:15 pm'>
+    <meta name='date' content='Monday, June 4th, 2018, 5:15 pm'>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+    <!-- flag-icon-css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" integrity="sha256-D+ZpDJjhGxa5ffyQkuTvwii4AntFGBZa4jUhSpdlhjM=" crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" href="">
+
+    <title>PM on PAL Guide</title>
+  </head>
+  <body data-spy="scroll" data-target="#index">
+    
+    <!-- Page content -->
+    <div class="container">
+      
+      <!-- Navigation bar -->
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-dark col-lg-12 pm">
+          <a data-i18n="[html]nb-title" class="navbar-brand" href="#">Project M Info</a>
+          
+          <span>
+            <!-- Language dropdown menu with button, flag and text to change the locale -->
+            <div id="mobile-locale-dropdown" style="display: none;" class="nav dropdown">            
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span id="flag-m" class="flag-icon flag-icon-gb"></span> 
+                <span class="flag-text">ENG</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right switch-locale">
+                <li><a href="#" data-locale="en">
+                  <span class="flag-icon flag-icon-gb"></span><span>English</span></a>
+                </li>
+                <li><a href="#" data-locale="fr">
+                  <span class="flag-icon flag-icon-fr"></span><span>Francais</span></a>
+                </li>
+                <li><a href="#" data-locale="de">
+                  <span class="flag-icon flag-icon-de"></span><span>Deutsch</span></a>
+                </li>
+              </ul>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> 
+          </span>
+          <!--<button class="navbar-toggler lang-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>-->
+          <div class="collapse navbar-collapse" id="navbar">
+            <div class="navbar-nav">
+              <a data-i18n="[html]nb-home" class="nav-item nav-link" href="#">Home</a>
+              <a data-i18n="[html]nb-guide" class="nav-item nav-link active" href="#">Guide</a>
+              <a data-i18n="[html]nb-faq" class="nav-item nav-link" href="#">F.A.Q.</a>
+              <span class="nav-item dropdown">
+                <a data-i18n="[html]nb-wiki" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wiki</a>
+                <div class="dropdown-menu pm" aria-labelledby="navbarDropdownMenuLink">
+                  <a data-i18n="[html]nb-wiki-pm" class="dropdown-item" href="#">What is Project M?</a>
+                  <a data-i18n="[html]nb-wiki-sm"class="dropdown-item" href="#">Softmodding</a>
+                  <a data-i18n="[html]nb-wiki-wm"class="dropdown-item" href="#">Wii models / types</a>
+                  <a data-i18n="[html]nb-wiki-ha"class="dropdown-item" href="#">Homebrew apps</a>
+                  <a data-i18n="[html]nb-wiki-bp"class="dropdown-item" href="#">Brick protection</a>
+                  <a data-i18n="[html]nb-wiki-ex"class="dropdown-item" href="#">Exploits</a>
+                  <a data-i18n="[html]nb-wiki-pn"class="dropdown-item" href="#">PAL & NTSC explained</a>
+                </div>
+              </span>
+              <a data-i18n="[html]nb-contacts" class="nav-item nav-link" href="#">Contacts</a>
+              <a data-i18n="[html]nb-about" class="nav-item nav-link" href="#">About</a>
+              <a data-i18n="[html]nb-soon" class="nav-item nav-link disabled" href="#">More coming soon</a>
+            </div>
+          </div>
+          
+            <!-- Language dropdown menu with button, flag and text to change the locale -->
+            <div id="desktop-locale-dropdown" style="display: none;" class="nav dropdown">            
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span id="flag-d" class="flag-icon flag-icon-gb"></span> 
+                <span class="flag-text">ENG</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right switch-locale">
+                <li><a href="#" data-locale="en">
+                  <span class="flag-icon flag-icon-gb"></span><span>English</span></a>
+                </li>
+                <li><a href="#" data-locale="fr">
+                  <span class="flag-icon flag-icon-fr"></span><span>Francais</span></a>
+                </li>
+                <li><a href="#" data-locale="de">
+                  <span class="flag-icon flag-icon-de"></span><span>Deutsch</span></a>
+                </li>
+              </ul>
+            </div>
+          
+        </nav>
+      </div>
+      
+      <!-- Main content -->
+      <div class="row" style="margin-top: 2em;">
+        
+        <!-- Index sidebar / Scrollspy -->
+        <section class="col-sm-3" id="left-column">
+          <nav class="nav nav-pills flex-column" id="index">
+            <a data-i18n="about-title" class="nav-link active" href="#about"></a>
+            <a data-i18n="dis.title" class="nav-link" href="#disclaimer"></a>
+            <a data-i18n="rea.title" class="nav-link" href="#reassurance"></a>
+            <a data-i18n="dif.title" class="nav-link" href="#difficulty"></a>
+            <a data-i18n="wyn.title" class="nav-link" href="#whatyouneed"></a>
+            <a class="nav-link" href="#updating">1. <span data-i18n="upd.title"></span></a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ml-3 my-1" href="#updating1">1. <span data-i18n="upd.ver.title"></span></a>
+              <a class="nav-link ml-3 my-1" href="#updating2">2. <span data-i18n="upd.wif.title"></span></a>
+              <a class="nav-link ml-3 my-1" href="#updating3">3. <span data-i18n="upd.upd.title"></span></a>
+            </nav>
+            <a class="nav-link" href="#prepdevices">2. <span data-i18n="pre.title"></span></a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ml-3 my-1" href="#prepdevices1">1. <span data-i18n="pre.mac.title"></span></a>
+              <a class="nav-link ml-3 my-1" href="#prepdevices2">2. <span data-i18n="pre.sd.title.short"></span></a>
+            </nav>
+          </nav>
+        </section>
+        
+        <!-- Guide -->
+        <div class="col-sm-9">
+          <!-- About this guide -->
+          <section id="about">
+            <h3 data-i18n="about-title"></h3>
+            <p data-i18n="about-t1"></p>
+            <a data-i18n="about-l1" href="wiki/project-m/"></a><br/>
+            <a data-i18n="about-l2" href="wiki/softmodding/"></a><br/>
+            <a data-i18n="about-l3" href="wiki/wii-models/"></a><br/>
+            <a data-i18n="about-l4" href="wiki/pal-ntsc/"></a><br/>
+            <a data-i18n="about-l5" href="faq/"></a>
+            <br/><br/>
+          </section>
+          <!-- Disclaimer -->
+          <section id="disclaimer">
+            <h3 data-i18n="dis.title"></h3>
+            <p data-i18n="[html]dis.t1"></p>
+          </section>
+          <!-- Reassurance -->
+          <section id="reassurance">
+            <h3 data-i18n="rea.title"></h3>
+            <p data-i18n="[html]rea.t1"></p>
+          </section>
+          <!-- Difficulty -->
+          <section id="difficulty">
+            <h3><span data-i18n="dif.title"></span>: <a data-i18n="dif.swim" href="https://www.google.com/search?tbm=isch&q=swimmies" style="color: #55d123">Swimmies</a></h3>
+            <p>If you follow this guide closely and don’t skip parts, it’s near impossible for you to really break something for good. This guide will show you to install two very solid and reliable <a href="wiki/brick-protection/">brick-protection</a> so in the unlikely event that something goes wrong nothing is lost.</p>
+            <p>
+              <strong>You're losing: </strong>You’re Wii’s warranty, but since the last <a href="wiki/wii-models/">normal Wiis</a> were manufactured in 2013 and Nintendo has 12 months of warranty on their systems by default, you most likely don’t have any warranty anymore anyway.
+              <br/><strong>Your Wii will not lose any functionality.</strong>
+            </p>
+            <p><strong>You're gaining: </strong>The ability to backup and load your games from a USB device or SD card, to play Project M and other mods, to use emulators, to use dozens of <a href="wiki/homebrew-apps/">homebrew applications</a> and <a href="wiki/softmodding">so much more!</a></p>
+          </section>
+          <!-- What you need -->
+          <section id="whatyouneed">
+            <h3>What you need</h3>
+            <section id="wyn">
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-toggle="popover" data-trigger="focus" title="PAL Wii" data-placement="top" data-content="There are different kinds of Wiis...">
+                <img src="https://rocketdock.com/images/screenshots/Wii-1.png"/>
+              </a>
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-toggle="popover" data-trigger="focus" title="Wii Remote" data-placement="top" data-content="You must have a Wii Remote...">
+                <img src="http://sm.pcmag.com/t/pcmag_uk/review/n/nintendo-w/nintendo-wii-remote-plus_8tpz.640.jpg"/>
+              </a>
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-toggle="popover" data-trigger="focus" title="Sensor Bar" data-placement="top" data-content="Don't forget this one...">
+                <img src="https://i5.walmartimages.com/asr/930cedc1-1197-458b-aeeb-371613327455_1.411e9b9a5efb1b16905186b985a10268.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"/>
+              </a>
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-html="true" data-toggle="popover" data-trigger="focus" title="SD Card" data-placement="top" data-content="Minimum size: 1GB...">
+                <img src="http://static.clickbd.com/global/classified/item_img/395627_0_original.jpg"/>
+              </a>
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-toggle="popover" data-trigger="focus" title="USB Stick" data-placement="top" data-content="Minimum size: 8GB. Every type...">
+                <img src="https://microsites.pearl.de/i/76/px4934_0.jpg"/>
+              </a>
+
+              <b><span data-i18n="[html]wyn.t1" class="wyn-text">or</span></b>
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-toggle="popover" data-trigger="focus" title="USB Hard Drive Disc (HDD)" data-placement="top" data-content="Same thing as with the USB Sticks...">
+                <img src="http://www.techandtrends.com/wp-content/uploads/2015/08/External-Hard-Drive1-950x675.jpg"/>
+              </a>
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-toggle="popover" data-trigger="focus" title="TV" data-placement="bottom" data-content="While any TV that works with your Wii...">
+                <img src="http://www.aurumrecovery.com/wp-content/uploads/2016/08/crtphoto-1024x683.jpg?x67004"/>
+              </a>
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-toggle="popover" data-trigger="focus" title="Computer" data-placement="bottom" data-content="Thanks to the cross-platform tools we have in this guide...">
+                <img src="https://cdn.britannica.com/700x450/77/170477-004-B774BDDF.jpg"/>
+              </a>
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-toggle="popover" data-trigger="focus" title="External SD Card reader" data-placement="bottom" data-content="If you don't have an internal SD Card reader...">
+                <img src="https://www.integralmemory.com/sites/default/files/imagecache/product_large/SDXC_Card_Reader_0.jpg"/>
+              </a>
+              <b><span>or</span></b>
+              <a tabindex="0" class="btn btn-lg" role="img" data-toggle="popover" data-trigger="focus" title="Internal SD Card reader" data-placement="bottom" data-content="Your typical built-in SD Card reader...">
+                <img src="https://img.purch.com/o/aHR0cHM6Ly9pbWcucHVyY2guY29tL3JjLzY3M3g0MzMvYUhSMGNEb3ZMM2QzZHk1c1lYQjBiM0J0WVdjdVkyOXRMMmx0WVdkbGN5OTNjQzlzWVhCMGIzQXRjMnhwWkdWemFHOTNMekk1T0Rnd05pNXFjR2M9"/>
+              </a>
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-html="true" data-toggle="popover" data-trigger="focus" title="All-In-One PM on PAL package" data-placement="bottom" data-content="This is a special download package...">
+                <img src="img/wyn/aio.jpg"/>
+              </a>
+
+              <a tabindex="0" class="btn btn-lg" role="img" data-toggle="popover" data-trigger="focus" title="NTSC Brawl ISO file" data-placement="bottom" data-content="Since Project M is built on top of NTSC Brawl...">
+                <img src="img/wyn/iso.jpg"/>
+              </a>
+            </section>
+          </section>
+          <!-- Updating -->
+          <section class="accordion card" id="updating">
+            <button class="card-header btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-updating" aria-expanded="true" aria-controls="collapseOne">
+              <p>
+                <span class="h3">1. Updating</span>
+                <span class="badge badge-pill badge-primary badge-h3">Wii</span>
+              </p>
+            </button>
+            <ol id="collapse-updating" class="collapse toplevel-list">
+              <li id="updating1">
+                <span>How to check your Wii's System Menu version</span>
+                <ol type="a">
+                  <li>Start your Wii</li>
+                  <li>In the Wii System Menu (default), go to <strong>Wii Options</strong> (bottom left button with "Wii")</li>
+                  <li>Choose <strong>Wii Settings</strong></li>
+                  <li>You're now in the <strong>Wii System Settings 1</strong></li>
+                  <li class="us">In the top right you can see your Wii System Menu version, if it says <strong>4.3</strong>(E/U/J) you should <a href="#prepdevices">skip the entire updating step</a>.</li>
+                  <li class="us">If you have a <strong>J</strong> or a <strong>U</strong> (meaning <strong>J</strong>apanese and <strong>U</strong>SA) Wii you can still follow this guide but you might have to make some small adjustments to your USB Loader later</li>
+                </ol>
+              </li>
+              <li id="updating2">
+                <span>How to setup an internet connection</span>
+                <ol type="a">
+                  <li class="us">This is the only step in the guide that requires an internet connection on your Wii. If you don't need to update your Wii, you also <strong>don't need to set this up.</strong></li>
+                  <li class="us">This is starting from the <strong> Wii System Settings 1</strong>. To get to this menu, follow <a href="#updating1">the first step</a></li>
+                  <li value="1">Click the arrow pointing to the right <strong>one time</strong> to get to <strong>Wii System Settings 2</strong></li>
+                  <li>Select <strong>Internet</strong></li>
+                  <li>Select <strong>Connection Settings</strong></li>
+                  <li class="us">Your Wii can have three WiFi connections. The one the Wii's supposed to use has an orange selector. If you don't know if you already have a working connection setup you can select it and hit <strong>Connection test.</strong>If you have a working connection already you can skip to <a href="#updating3">3. Updating your Wii</a></li>
+                  <li value="4">Select a connection that says <em>"None"</em> on the right next to it (Empty slot)</li>
+                  <li>Select <strong>Wireless Connection</strong></li>
+                  <li>Select <strong>Search for an Access Point</strong></li>
+                  <li>Select <strong>Okay</strong></li>
+                  <li>Choose your Wireless Router from the list</li>
+                  <li>Enter your WiFi password and hit <strong>OK</strong>, then <strong>OK</strong> again</li>
+                  <li>Press <strong>OK</strong> again to save the settings</li>
+                  <li>Press <strong>OK</strong> once more to test your connection</li>
+                  <li class="us">You will be asked if you want to update your Wii, if you select <strong>Yes</strong> here you can skip <em>3. How to update your Wii</em> You can select <strong>No</strong> to update manually.<br/>The new connection will automatically be the default connection now.</li>
+                  
+                </ol>
+              </li>
+              <li id="updating3">
+                <span>How to update your Wii</span>
+                <ol type="a">
+                  <li class="us">This is starting from the <strong> Wii System Settings 1</strong>. To get to this menu, follow <a href="#updating1">the first step</a></li>
+                  <li value="1">Click the arrow pointing to the right <strong>two times</strong> to get to <strong>Wii System Settings 3</strong></li>
+                  <li>Click <strong>Wii System Update</strong></li>
+                  <li>Click <strong>Yes</strong></li>
+                  <li>Click <strong>I Accept</strong></li>
+                  <li class="us">Let it update. Don't power off the console! Depending on your internet connection this might take a while, just be patient</li>
+                  <li class="us">If successful it should say <em>"The Wii system update is complete (...)"</em></li>
+                  <li value="10">Hit <strong>Okay</strong></li>
+                  <li>Next you'll be asked if you want to <em>"use the Wii Shop Channel and WiiConnect24"</em></li>
+                  <li>As these services are not supported anymore, choose <strong>No</strong></li>
+                  <li><em>"Are you sure?"</em> - Select <strong>Yes</strong></li>
+                  <li>Click on <strong>Wii Menu</strong></li>
+                </ol>
+              </li>
+            </ol>
+          </section>
+          <!-- Preparing your devices -->
+          <section id="prepdevices">
+            <h3>2. Preparing your devices</h3>
+            <ol class="toplevel-list">
+              <li>
+                <span id="prepdevices1">Finding your Wii's MAC Adress</span>
+                <span data-toggle="tooltip" title="The Wii only reads letters that are signed with it's own MAC Adress. Learn more on the exploits wiki page.">
+                  (<a href="#">Why?</a>)
+                </span>
+                <span class="badge badge-pill badge-primary badge-ol">Wii</span>
+                <ol type="a">
+                  <li class="us">This is starting from the <strong> Wii System Settings 1</strong>. To get to this menu, follow <a href="#updating1">the first step</a></li>
+                  <li value="1">Click the arrow pointing to the right <strong>one time</strong> to get to <strong>Wii System Settings 2</strong></li>
+                  <li>Select <strong>Internet</strong></li>
+                  <li>Select "Console Information"</li>
+                  <li>Record your Wii’s MAC Adress (or read it from the TV screen for the next step)</li>
+                </ol>
+              </li>
+              <li>
+                <span id="prepdevices2">Preparing the SD Card</span>
+                <span class="badge badge-pill badge-success badge-ol">Computer</span>
+                <ol type="a">
+                  <li>Backup any data you still need from your SD Card and format it as FAT32 with the biggest Allocation unit size you can choose</li>
+                  <li>Acquiring <a href="wiki/exploits#letterbomb">LetterBomb</a>
+                    <ol type="I">
+                      <li>
+                        <span>Go to the <a href="http://please.hackmii.com/">HackMii Website</a></span>
+                        <br/>
+                        <a href="wiibrand/" class="badge badge-pill badge-primary guide">Alternative</a>
+                      </li>
+                      <li>Make sure “Bundle the HackMii Installer for Me” is checked</li>
+                      <li>Select <strong>4.3E</strong> as the System Menu version</li>
+                      <li>Enter your Wii's MAC Address</li>
+                      <li>Fill in the captcha</li>
+                      <li>Cut any of the two wires (doesn't matter which one)</li>
+                      <li>Open the downloaded file and extract the contents to the root of your SD Card
+                    </ol>
+                  </li>
+                  <li>
+                    <span>Putting the All-In-One package on your SD Card</span>
+                    <ol type="i">
+                      <li>Open the downloaded file</li>
+                      <li>Extract the contents of the "SD Card" subfolder to the root of your SD Card</li>
+                    </ol>
+                  </li>
+                  <li>Remove your SD Card</li>
+                </ol>
+              </li>
+            </ol>
+          </section>
+          
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Awesome!</h4>
+            <p>We're practically halfway done!</p>
+            <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50% Done</div>
+            </div>
+          </div>
+          
+          <!-- Installing the Homebrew Channel -->
+          <section id="homebrewchannel">
+            <p>
+              <span class="h3">3. Installing the Homebrew Channel</span>
+              <span class="badge badge-pill badge-primary badge-h3">Wii</span>
+            </p>
+            <ol class="toplevel-list">
+              <li>Insert your SD Card and USB device into your Wii</li>
+              <li class="us">The USB device goes into the outer port on the back</li>
+              <li value="2">Go to your Wii System Menu and go to messages</li>
+              <li>You will find a letter with the LetterBomb logo either “yesterday”, today or another recent date </li>
+              <li>Open the letter (some white text on a black screen will appear)</li>
+              <li>Wait the 30 seconds scam warning until you can continue</li>
+              <li>Press 1 to continue</li>
+              <li>You are now in the HackMii installer</li>
+              <li>
+                <span>Depending on your Wii it will show different things behind BootMii:</span>
+                <ol type="a">
+                  <li>If you see <em>Can be installed</em> you can install BootMii as <a href="wiki/boot2/">boot2</a></li>
+                  <li>If you see <em>Can only be installed as an IOS</em>, you can only install BootMii as an IOS</li>
+                </ol>
+              </li>
+              <li>(Install the Homebrew Channel)</li>
+              <li>(Installing BootMii, optimally as boot2)</li>
+              <li>(Exiting and landing at the Homebrew Channel)</li>
+              <li>(Optionally making a backup)</li>
+            </ol>
+          </section>
+          
+          <!-- Installing d2x-cIOS-v10 -->
+          <section id="d2x-cIOS">
+            <p>
+              <span class="h3">4. Installing d2x-cIOS</span>
+              <span class="badge badge-pill badge-primary badge-h3">Wii</span>
+            </p>
+            <ol class="toplevel-list">
+              <li>(v10beta53-alt, IOS56, Slot 249)</li>
+            </ol>
+          </section>
+          
+          <!-- Running Project M -->
+          <section id="run-pm">
+            <p>
+              <span class="h3">5. Running Project M</span>
+              <span class="badge badge-pill badge-primary badge-h3">Wii</span>
+            </p>
+            <ol class="toplevel-list">
+              <li>(v10beta53-alt, IOS56, Slot 249)</li>
+            </ol>
+          </section>
+          
+          <!-- Installing Priiloader -->
+          <section id="priiloader">
+            <p>
+              <span class="h3">6. Optional: Installing Priiloader (launch PM without Wii Remote)</span>
+              <span class="badge badge-pill badge-primary badge-h3">Wii</span>
+            </p>
+            <ol class="toplevel-list">
+              <li>[...]</li>
+            </ol>
+          </section>
+          
+          <!-- Bonus steps -->
+          <section id="bonus-steps">
+            <p>
+              <span class="h3">7. Bonus steps (Installing Melee / Nintendon't, installing more games</span>
+              <span class="badge badge-pill badge-primary badge-h3">Wii</span>
+            </p>
+            <ol class="toplevel-list">
+              <li>[...]</li>
+            </ol>
+          </section>
+          
+          <!-- Credit -->
+          <section id="credit">
+            <h3>Credit</h3>
+            <ul class="toplevel-list">
+              <li><a href="https://sites.google.com/site/completesg/">CompleteSoftmodGuide</a>, main source for this guide</li>
+              <li><a href="https://smashboards.com/members/ndowner.246169/">ndowner</a>, for the <a href="https://smashboards.com/threads/project-m-on-a-pal-wii-updated.356936/">OG Project M PAL guide</a> that served many well but is outdated (which is why we’re making this guide)</li>
+              <li><a href="contacts/Kirbeast/">Kirbeast</a>, helping me lab all sorts of stuff with Video Modes and USB Loaders and making the custom CFG USB Loaders with custom paths for different builds and more</li>
+              <li><a href="contacts/Titibandit/">Titibandit</a>, for teaming up with me to get this project really going, helping with the web-development and making a very eleborate draft</li>
+            </ul>
+          </section>
+              
+          
+        </div>
+        
+      </div>
+
+    </div>
+    
+    <!-- All the JavaScript -->
+    <section>
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+      
+      <!-- jQuery i18n local JS files because of showdown.js integration -->
+      <script src="i18n/jquery.i18n.js"></script>
+      
+      <!-- jQuery i18n CDN JS files -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.4/jquery.i18n.messagestore.min.js" integrity="sha256-E4N7my5ObrBG26FZC2Suynu+fwHG9avmBi93Kb4V0Ls=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.4/jquery.i18n.fallbacks.min.js" integrity="sha256-brY06NeoMeTfADA4nNMnLBEySMMpw9ZNM+5b9OX5A3o=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.4/jquery.i18n.language.min.js" integrity="sha256-E/HNS4jjzEwivvzyf/iSJgaa8Dbp0FzSpMOXZSfLPZI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.4/jquery.i18n.parser.min.js" integrity="sha256-A3LDPpIRAyNGb+a5LM+yBEuexEZdMueehi49pHxLS9g=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.4/jquery.i18n.emitter.min.js" integrity="sha256-5S4KtKHthvOilcDP4WPmt75A0a0gKOXUMYAJP/WL5m4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.4/jquery.i18n.emitter.bidi.min.js" integrity="sha256-gcsIExDfAjDpIthC0ZMjGdMnv5UUOdebxef6r4gYm/E=" crossorigin="anonymous"></script>
+      
+      <!-- jQuery.history.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/history.js/1.8/native.history.min.js"></script>
+      
+      <!-- js-url -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.3/url.min.js"></script>
+      
+      <!-- showdownjs markdown parser -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+      
+      <script src="js/global.js"></script>
+      <script src="js/smoothscroll.js"></script>
+    </section>
+
+  </body>
+</html>
