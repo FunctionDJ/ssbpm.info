@@ -1,0 +1,9 @@
+{
+  "language": "sample",
+  "lang-code": "sm",
+  "keys": {
+    "title": "hi",
+    "paragraph": "Dies ist ein Paragraph.",
+    "anotherkey": "something"
+  }
+}
