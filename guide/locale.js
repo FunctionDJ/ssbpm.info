@@ -31,15 +31,23 @@ function getURLLang() {
 
 function setURLLang(locale) {
     const suffix = window.location.search;
-    const search = suffix.indexOf('lang=');
+    const regex = /(?:\?|&)lang=([^&]*)/ig;
+    const regArray = regex.exec(suffix);
 
-    if (search > -1) { // indexOf returns -1 if nothing found
+    if (regArray)
+
+    if (searchStart > -1) { // indexOf returns -1 if nothing found
+        // lang= found
+        // now we wanna find the end of the value
+
+
         const pre = suffix.substring(0, search + 5);
         const post = suffix.substring(search + 7, suffix.length);
 
         window.history.pushState(null, null, pre + locale + post);
-        //
+        // re-assembles everything before lang and after, only changing the value
     } else {
+        // no lang= found
         const searchFirst = suffix.indexOf('?');
 
         if (searchFirst > -1) {
@@ -61,7 +69,7 @@ function isSupportedLang(locale) {
     return (languages.indexOf(locale) > -1);
 }
 
-(function() { // gets executed on DOM ready
+/*(function() { // gets executed on DOM ready
     const URLLang = getURLLang(); // get ?lang= or &lang=
     let locale;
 
@@ -73,9 +81,9 @@ function isSupportedLang(locale) {
         locale = browserLang;
         setURLLang(locale);
     } else {
-        locale = "en"
+        locale = "en";
         setURLLang("en");
     }
 
     console.log(`Locale: ${locale}`);
-})();
+})();*/
