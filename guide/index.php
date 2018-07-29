@@ -8,7 +8,10 @@
     <script>
         <?php echo "const browserLang = '".substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)."';\n" ?>
     </script>
+
+    <link rel="stylesheet" href="header.css">
 </head>
+<?php include 'header.php?active=guide'; ?>
 <body>
     <p data-id="keys.paragraph">This is a paragraph.</p>
     <input type="button" onclick="changeLocale('sample');" value="Exec">
