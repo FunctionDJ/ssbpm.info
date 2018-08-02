@@ -6,8 +6,10 @@ function eINN (&$variable) {
     echo isset($variable) ? $variable : '';
 }
 
-$t = $_GET["active"];
-$$t = $t; // if active=guide, $guide = 'guide'; etc. eINN() important!
+if (isset($_GET["active"])) {
+    $t = $_GET["active"];
+    $$t = $t; // if active=guide, $guide = 'guide'; etc. eINN() important!
+}
 
 echo <<<HTML
 

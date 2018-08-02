@@ -21,6 +21,7 @@ src/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+html5-boilerplate_v6.1.0/
 legacy/
 .idea/
 

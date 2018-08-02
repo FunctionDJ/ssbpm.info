@@ -1,3 +1,7 @@
+<?php
+$ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +13,9 @@
         <?php echo "const browserLang = '".substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)."';\n" ?>
     </script>
 
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<?php include 'header.php?active=guide'; ?>
+<?php include("{$base_dir}guide{$ds}header.php"); ?>
 <body>
     <p data-id="keys.paragraph">This is a paragraph.</p>
     <input type="button" onclick="changeLocale('sample');" value="Exec">
