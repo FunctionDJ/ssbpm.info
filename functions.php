@@ -101,9 +101,46 @@ function resolveLang() {
 
     $lang = $_GET['lang'] ?? 'en';
 
-    if (!property_exists($languages, $_GET['lang'])) {
+    if (!property_exists($languages, $lang)) {
         $lang = 'en';
     }
 
     return $lang;
 }
+
+function trimLang($path = null) {
+  $languages = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/languages.json'));
+  //var_dump($languages); echo '<br/>';
+  
+  $path = is_null($path) ? $_SERVER['REQUEST_URI'] : $path;
+  $foldersRaw = explode("/", $path);
+  $foldersFiltered = [];
+  foreach($foldersRaw as $value) {
+      if ($value != '') {
+          array_push($foldersFiltered, $value);
+      }
+  }
+  // $folderFiltered = ['de', 'wiki', 'softmodding',]
+
+  $langStrings = get_object_vars($languages);
+  foreach ($langStrings as $langs) {
+    var_dump(get_object_vars($langs)); echo '<br/>';
+  }
+
+  exit();
+  foreach($languages as $lang) {
+    var_dump($lang); echo '<br/>';
+    //if ($foldersFiltered[0] == $lang) {
+    //  $foldersTrimmed = array_splice($foldersFiltered, 1);
+    //}
+  }
+
+  $path = '/';
+
+  foreach($foldersTrimmed as $value) {
+      $path .= $value . '/';
+  }
+}
+
+// trimLang('/de/wiki/softmodding/');
+// ['de', 'wiki', 'softmodding']

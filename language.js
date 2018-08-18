@@ -11,6 +11,8 @@ function changeLocale(language) {
                 const keys = elem.dataset.id;
                 elem.innerHTML = digObject(json, keys);
             });
+
+            console.log(`  ${json.language} loaded`);
         });
 }
 

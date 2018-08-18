@@ -1,0 +1,24 @@
+{
+    "deploy.reloaded": {
+        "packages": [
+            {
+                "name": "Runtime files",
+                "deployOnChange": true,
+                "description": "Who cares",
+                "files": [
+                    "*.*"
+                ],
+                "targets": [ "My local folder" ]
+            }
+        ],
+        "targets": [
+            {
+                "type": "local",
+                "name": "My local folder",
+                "description": "A local folder",
+
+                "dir": "C:/xampp/htdocs"
+            }
+        ]
+    }
+}

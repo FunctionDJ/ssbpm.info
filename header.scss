@@ -1,0 +1,11 @@
+header {
+  #logo {
+    margin-right: 1rem;
+  }
+
+  #langdropdown {
+    justify-content: flex-end;
+    color: black;
+    margin-right: 1rem !important; // Bootstrap 4 things (sighs)
+  }
+}

@@ -1,0 +1,12 @@
+header #logo {
+  margin-right: 1rem;
+}
+
+header #langdropdown {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: black;
+  margin-right: 1rem !important;
+}
+/*# sourceMappingURL=header.css.map */
