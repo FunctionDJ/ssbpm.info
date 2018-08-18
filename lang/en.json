@@ -1,0 +1,21 @@
+{
+  "language": "English",
+  "lang-code": "sm",
+  "keys": {
+    "title": "hi",
+    "paragraph": "Dies ist ein Paragraph.",
+    "anotherkey": "something",
+    "key": ""
+  },
+  "h1": "English geladen!",
+  "header": {
+    "home": "Home",
+    "guide": "Guide",
+    "about": "About",
+    "wiki": "Wiki",
+    "softmodding": "Softmodding",
+    "palvsntsc": "PAL vs. NTSC",
+    "somethingelse": "Something else heeeee",
+    "languages": "Languages"
+  }
+}

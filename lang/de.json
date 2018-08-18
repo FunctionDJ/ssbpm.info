@@ -1,0 +1,20 @@
+{
+  "language": "sample",
+  "lang-code": "sm",
+  "keys": {
+    "title": "hi",
+    "paragraph": "Dies ist ein Paragraph.",
+    "anotherkey": "something"
+  },
+  "h1": "Gudn tach",
+  "header": {
+    "home": "Startseite",
+    "guide": "Guide",
+    "about": "Impressum",
+    "wiki": "Wiki",
+    "softmodding": "Softmodding",
+    "palvsntsc": "PAL vs. NTSC",
+    "somethingelse": "Was Anderes",
+    "languages": "Sprachen"
+  }
+}

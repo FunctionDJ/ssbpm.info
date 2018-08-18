@@ -1,15 +1,19 @@
 <?php
-
-function e($var) {
-  echo $var ?? '';
-}
+error_reporting(0); // turn off error reporting so we can use possible undefined variables in the HEREDOC
 
 isset($here) ? $$here = 'active' : $home = 'active' ;
+// if $here is set from the including index.php, set a variable of it's value to "active"
+// i.e. $here = 'guide' => $guide = 'active'
+// these variables are then used to highlight the active tab via the class attribute
 
-$uri = $_SERVER['REQUEST_URI'];
+// the URI is appended to the language dropdown links in order to not send the user to the homepage on language switch
+if (isset($GLOBALS['included'])) { // if the including index.php was included by the functions.php
+  $uri = substr($_SERVER['REQUEST_URI'], 3); // remove the '/xx' from the URI because it's a language code
+} else {
+  $uri = $_SERVER['REQUEST_URI']; // otherwise use the full URI
+}
 
-?>
-
+echo <<<HTML
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     
@@ -20,35 +24,39 @@ $uri = $_SERVER['REQUEST_URI'];
         
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item <?php e($home) ?>"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item <?php e($guide) ?>"><a class="nav-link" href="#">Guide</a></li>
-        <li class="nav-item <?php e($about) ?>"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item $home"><a data-t="header.home" class="nav-link" href="#">Home</a></li>
+        <li class="nav-item $guide"><a data-t="header.guide" class="nav-link" href="#">Guide</a></li>
+        <li class="nav-item $about"><a data-t="header.about" class="nav-link" href="#">About</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wiki</a>
+          <a data-t="header.wiki" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wiki</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Softmodding</a>
-            <a class="dropdown-item" href="#">PAL vs. NTSC</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a data-t="header.softmodding" class="dropdown-item" href="#">Softmodding</a>
+            <a data-t="header.palvsntsc" class="dropdown-item" href="#">PAL vs. NTSC</a>
+            <a data-t="header.somethingelse" class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
       </ul>
 
       <ul id="langdropdown" class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages</a>
+          <a data-t="header.languages" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/da<?php e($uri) ?>">dansk</a>
-            <a class="dropdown-item" href="/nl<?php e($uri) ?>">Nederlands</a>
-            <a class="dropdown-item" href="<?php e($uri) ?>">English</a>
-            <a class="dropdown-item" href="/fi<?php e($uri) ?>">suomi</a>
-            <a class="dropdown-item" href="/fr<?php e($uri) ?>">français</a>
-            <a class="dropdown-item" href="/de<?php e($uri) ?>">Deutsch</a>
-            <a class="dropdown-item" href="/it<?php e($uri) ?>">italiano</a>
-            <a class="dropdown-item" href="/es<?php e($uri) ?>">español</a>
-            <a class="dropdown-item" href="/sv<?php e($uri) ?>">svenska</a>
+            <a class="dropdown-item" href="/da$uri">dansk</a>
+            <a class="dropdown-item" href="/nl$uri">Nederlands</a>
+            <a class="dropdown-item" href="$uri">English</a>
+            <a class="dropdown-item" href="/fi$uri">suomi</a>
+            <a class="dropdown-item" href="/fr$uri">français</a>
+            <a class="dropdown-item" href="/de$uri">Deutsch</a>
+            <a class="dropdown-item" href="/it$uri">italiano</a>
+            <a class="dropdown-item" href="/es$uri">español</a>
+            <a class="dropdown-item" href="/sv$uri">svenska</a>
           </div>
         </li>
       </ul>
     </div>
   </nav>
 </header>
+HTML;
+
+error_reporting(E_ALL);
+?>

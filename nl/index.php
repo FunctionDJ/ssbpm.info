@@ -7,4 +7,4 @@ require_once($root . '/functions.php');
 // load functions.php from root for doing all the hard work
 
 // include file
-loadSkeleton('de');
+loadSkeleton('nl');

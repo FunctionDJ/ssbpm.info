@@ -1,27 +1,16 @@
 <?php
+$root = $_SERVER['DOCUMENT_ROOT']; // set root for include and require
+require_once $root . '/functions.php'; // require functions.php for loading translations and what not
 
-// set root for loading files
-$root = $_SERVER['DOCUMENT_ROOT'];
+if (!isset($GLOBALS['included'])) { // if functions.php isn't already loading a translation
+  printTranslation('en'); // then just load english
+}
 
-// load functions.php
-require_once $root . '/functions.php';
-
-// load languages
-$languages = file_get_contents($root . '/languages.json');
-$languages = json_decode($languages);
-
-// get language
-$lang = resolveLang($langDir ?? '');
-
-$here = 'home';
-
-// hand language to javascript
-echo '<script>const language = "' . $lang . '";</script>';
-
+$here = 'home'; // for header.php
 ?>
 
 <!doctype html>
-<html lang="<?php echo $lang ?>">
+<html lang="<?php //echo $lang ?>">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -35,10 +24,10 @@ echo '<script>const language = "' . $lang . '";</script>';
   <title>ssbpm.info - Project M</title>
 </head>
 <body class="body container">
-  <?php include_once $root . '/header.php'; ?>
+  <?php include_once $root . '/header.php'; // include header.php ?>
 
   <div class="container" id="pagecontent">
-      <h1 data-id="h1">Henlo fren</h1>
+      <h1 data-t="h1">Henlo fren</h1>
   </div>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
