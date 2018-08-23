@@ -1,0 +1,20 @@
+{
+  "language": "English",
+  "lang-code": "en",
+  "authors": "waffeln",
+  "notes": "",
+
+  "contact": "Contact",
+
+  "waffeln": {
+    "name": "waffeln",
+    "role": "Head Developer & Maintainer",
+    "info": "*Really* likes this game."
+  },
+
+  "titibandit": {
+    "name": "Titibandit",
+    "role": "Founder & Contributor",
+    "info": "-/-"
+  }
+}

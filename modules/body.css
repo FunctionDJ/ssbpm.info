@@ -1,0 +1,29 @@
+html {
+  background-color: #eee;
+}
+
+.body {
+  padding: 0;
+}
+
+@media (min-width: 576px) {
+  .body {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    border-radius: 10px 10px 0 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px;
+  }
+  body header nav {
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+body #pagecontent {
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=body.css.map */

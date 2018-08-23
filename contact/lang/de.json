@@ -1,0 +1,20 @@
+{
+  "language": "Deutsch",
+  "lang-code": "de",
+  "authors": "waffeln",
+  "notes": "",
+
+  "contact": "Kontakt",
+
+  "waffeln": {
+    "name": "waffeln",
+    "role": "Haupt-Entwickler & Instandhaltung",
+    "info": "Mag das Spiel *sehr* gerne."
+  },
+
+  "titibandit": {
+    "name": "Titibandit",
+    "role": "Gründer & Mitwirkender",
+    "info": "-/-"
+  }
+}

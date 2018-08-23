@@ -1,0 +1,22 @@
+html {
+  background-color: #eee;
+}
+
+.body {
+  padding: 0;
+  @media (min-width: 576px) {
+    margin-top: 20px;
+  }
+}
+
+body {
+  @media (min-width: 576px) {
+    border-radius: 10px 10px 0 0;
+    header nav {border-radius: 10px 10px 0 0}
+    box-shadow: rgba(0,0,0,0.3) 0 0 20px;
+  }
+
+  #pagecontent {
+    margin-top: 1rem;
+  }
+}

@@ -7,4 +7,4 @@ require_once($root . '/functions.php');
 // load functions.php from root for doing all the hard work
 
 // include file
-loadSkeleton('nl');
+loadSkeleton(); // no argument => getLanguage() called which strips the language code out of the URI of this file

@@ -4,7 +4,7 @@ require_once $root . '/functions.php'; // require functions.php for loading tran
 fallbackEn(); // print english if no language was already printed
 $lang = getHrefLang(); // get the code to insert before href="" attributes
 $lcode = getLcode(); // get raw language code for html lang=""
-$here = 'home'; // for header.php
+$here = 'contact'; // for header.php
 echo <<<HTML
 
 <!doctype html>
@@ -30,19 +30,29 @@ include_once $root . '/modules/header/header.php'; // include header.php
 
 echo <<<HTML
 
-  <div class="container text-center" id="pagecontent">
+  <div class="container my-5" id="pagecontent">
+    <h4 class="text-center my-4" data-t="contact">Contact</h4>
 
-    <div style="margin-top: 3rem; margin-bottom: 2rem;">
-      <h3 data-t="welcome">Welcome to</h3>
-      <img src="/assets/logosmall.png" class="img-fluid"/>
+    <div class="d-flex justify-content-center flex-wrap">
+      <div class="card m-3" style="width: 20rem">
+        <div class="card-body">
+          <h5 data-t="waffeln.name" class="card-title">waffeln</h5>
+          <h6 data-t="waffeln.role" class="card-subtitle mb-2 text-muted">Head Developer & Maintainer</h6>
+          <p data-t="waffeln.info" class="card-text"><em>Really</em> likes this game.</p>
+          <a class="card-link" href="https://twitter.com/wffln">Twitter</a>
+          <a class="card-link" href="mailto:sinusstudios@gmail.com">E-Mail</a>
+        </div>
+      </div>
+      <div class="card m-3" style="width: 20rem">
+        <div class="card-body">
+          <h5 data-t="titibandit.name" class="card-title">Titibandit</h5>
+          <h6 data-t="titibandit.role" class="card-subtitle mb-2 text-muted">Founder & Contributor</h6>
+          <p data-t="titibandit.info" class="card-text">-/-</p>
+          <a class="card-link" href="https://twitter.com/wffln">Twitter</a>
+          <a class="card-link" href="mailto:sinusstudios@gmail.com">E-Mail</a>
+        </div>
+      </div>
     </div>
-
-    <p data-t="intro.1">This website was made for people interested in [Project M](/wiki/projectm), the premier Super Smash Bros. Brawl modification.</p>
-    <p data-t="intro.2">To get started installing Project M, click here:</p>
-    <div style="margin-top: 2rem;">
-      <a data-t="intro.guidebutton" class="btn btn-primary btn-lg" href="$lang/guide/">PM Installation Guide</a>
-    </div>
-
   </div>
 
 HTML;

@@ -2,6 +2,16 @@ header #logo {
   margin-right: 1rem;
 }
 
+header #language-note {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 992px) {
+  header #language-note {
+    display: none;
+  }
+}
+
 header #langdropdown {
   -webkit-box-pack: end;
       -ms-flex-pack: end;

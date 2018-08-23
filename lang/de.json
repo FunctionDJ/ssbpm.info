@@ -1,20 +1,13 @@
 {
-  "language": "sample",
-  "lang-code": "sm",
-  "keys": {
-    "title": "hi",
-    "paragraph": "Dies ist ein Paragraph.",
-    "anotherkey": "something"
-  },
-  "h1": "Gudn tach",
-  "header": {
-    "home": "Startseite",
-    "guide": "Guide",
-    "about": "Impressum",
-    "wiki": "Wiki",
-    "softmodding": "Softmodding",
-    "palvsntsc": "PAL vs. NTSC",
-    "somethingelse": "Was Anderes",
-    "languages": "Sprachen"
+  "language": "Deutsch",
+  "lang-code": "de",
+  "authors": "waffeln",
+  "notes": "",
+  
+  "welcome": "Willkommen auf",
+  "intro":  {
+    "1": "Diese Website ist für Alle, die [Project M](/wiki/projectm/), die populärste Super Smash Bros. Brawl Mod, ausprobieren wollen.",
+    "2": "Um mit dem Installieren von Project M loszulegen, klick hier:",
+    "guidebutton": "PM Installations Guide"
   }
 }
