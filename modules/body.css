@@ -12,6 +12,10 @@ html {
   }
 }
 
+body {
+  position: relative;
+}
+
 @media (min-width: 576px) {
   body {
     border-radius: 10px 10px 0 0;

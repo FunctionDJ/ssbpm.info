@@ -30,7 +30,7 @@ echo <<<HTML
       <ul class="navbar-nav mr-auto">
         <li class="nav-item $home"><a data-h="home" class="nav-link" href="$lang/">Home</a></li>
         <li class="nav-item $guide"><a data-h="guides" class="nav-link" href="$lang/guides/">Guides</a></li>
-        <li class="nav-item $guide"><a data-h="faq" class="nav-link" href="$lang/faq/">F.A.Q.</a></li>
+        <li class="nav-item $faq"><a data-h="faq" class="nav-link" href="$lang/faq/">F.A.Q.</a></li>
         <li class="nav-item dropdown">
           <a data-h="wiki" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wiki</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
