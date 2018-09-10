@@ -38,5 +38,5 @@ function prevPage() {
 
 (function() { // run after full page load
   
-  $('#page-2').show();
+  $('#page-1').show();
 })();
