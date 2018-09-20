@@ -1,38 +1,13 @@
 <?php
-$root = $_SERVER['DOCUMENT_ROOT']; // set root for include and require
-require_once $root . '/functions.php'; // require functions.php for loading translations and what not
-fallbackEn(); // print english if no language was already printed
-$lang = getHrefLang(); // get the code to insert before href="" attributes
-$lcode = getLcode(); // get raw language code for html lang=""
+require_once $_SERVER['DOCUMENT_ROOT'] . '/functions.php'; // require functions.php for loading translations and what not
+
 $here = 'about'; // for header.php
-echo <<<HTML
+$title = 'About - ssbpm.info';
+$lang = getHrefLang(); // get the code to insert before href="" attributes
 
-<!doctype html>
-<html lang="$lcode">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+$body = <<<HTML
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="/modules/body.css">
-  <link rel="stylesheet" href="/modules/header/header.css">
-  <link rel="stylesheet" href="/modules/footer/footer.css">
-
-  <link rel="icon" type="image/png" href="/favicon.ico"/>
-
-  <title data-t="title">About - ssbpm.info</title>
-</head>
-<body class="body container">
-
-HTML;
-
-include_once $root . '/modules/header/header.php'; // include header.php
-
-echo <<<HTML
-
-  <div class="m-5" id="pagecontent">
+  <div class="m-5">
     <h5 data-t="about">About</h5>
     <p data-t="1">ssbpm.info is an informational / educational website about the video game modification "Project M" of the 2008 Nintendo Wii game Super Smash Bros. Brawl.
     Any people related to this site can not be held liable for any damage that might occur by following guides from this website.</p>
@@ -45,5 +20,5 @@ echo <<<HTML
   </div>
 
 HTML;
-include_once $root. '/modules/footer/footer.php'; // include footer.php
-?>
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/modules/loader.php';

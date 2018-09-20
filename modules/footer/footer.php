@@ -1,5 +1,10 @@
 <?php
+
+$customJS = $customJS ?? '';
+
 echo <<<HTML
+
+  </div>
 
   <footer style="background-color: #444" class="footer container">
     <div class="container d-flex justify-content-around text-muted font-weight-light">
@@ -21,8 +26,9 @@ echo <<<HTML
   
   <!-- custom JS -->
   <script src="/modules/language.js"></script>
+  $customJS
+
 </body>
 </html>
 
 HTML;
-?>

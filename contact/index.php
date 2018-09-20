@@ -1,37 +1,14 @@
 <?php
-$root = $_SERVER['DOCUMENT_ROOT']; // set root for include and require
-require_once $root . '/functions.php'; // require functions.php for loading translations and what not
-fallbackEn(); // print english if no language was already printed
-$lang = getHrefLang(); // get the code to insert before href="" attributes
-$lcode = getLcode(); // get raw language code for html lang=""
+require_once $_SERVER['DOCUMENT_ROOT'] . '/functions.php'; // require functions.php for loading translations and what not
+
 $here = 'contact'; // for header.php
-echo <<<HTML
+$title = 'Contact - ssbpm.info';
+$lang = getHrefLang(); // get the code to insert before href="" attributes
 
-<!doctype html>
-<html lang="$lcode">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="/modules/body.css">
-  <link rel="stylesheet" href="/modules/header/header.css">
-  <link rel="stylesheet" href="/modules/footer/footer.css">
-
-  <title>ssbpm.info - Project M</title>
-</head>
-<body class="body container">
-
-HTML;
-
-include_once $root . '/modules/header/header.php'; // include header.php
-
-echo <<<HTML
+$body = <<<HTML
 
   <div class="container my-5" id="pagecontent">
-    <h4 class="text-center my-4" data-t="contact">Contact</h4>
+    <h3 class="text-center my-4" data-t="contact">Contact</h3>
 
     <div class="d-flex justify-content-center flex-wrap">
       <div class="card m-3" style="width: 20rem">
@@ -56,5 +33,5 @@ echo <<<HTML
   </div>
 
 HTML;
-include_once $root. '/modules/footer/footer.php'; // include footer.php
-?>
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/modules/loader.php';

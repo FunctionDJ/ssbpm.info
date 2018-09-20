@@ -51,8 +51,8 @@ echo <<<HTML
         <li class="nav-item dropdown">
           <a data-h="language-dropdown" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <!--<a class="dropdown-item" href="/da$uri">Dansk</a>-->
-            <a class="dropdown-item" href="/nl$uri">Nederlands</a>
+            <!--<a class="dropdown-item" href="/da$uri">Dansk</a>
+            <a class="dropdown-item" href="/nl$uri">Nederlands</a>-->
             <a class="dropdown-item" href="$uri">English</a>
             <!--<a class="dropdown-item" href="/fi$uri">Suomi</a>
             <a class="dropdown-item" href="/fr$uri">Français</a>-->
