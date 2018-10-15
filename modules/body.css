@@ -21,4 +21,14 @@ html, #body {
             box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px;
   }
 }
+
+blockquote {
+    border-left: 5px solid #eee;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+.youtube_row {
+    margin-bottom: 20px;
+}
 /*# sourceMappingURL=body.css.map */
