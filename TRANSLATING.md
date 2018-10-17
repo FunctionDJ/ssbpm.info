@@ -3,7 +3,9 @@
 This page will explain how the translation system works and how you can help translating the website into one of these currently planned languages:
 
 * en - English (Original / Base)
+
 (in some cases English won't have a short code because it's the default)
+
 * de - German
 * fr - French
 * nl - Dutch
@@ -29,18 +31,18 @@ Every folder in the root of the project falls into three categories:
 
 For translation, only the sub-page folders and /lang/ folders are relevant.
 
-Please contact waffeln#0001 on Discord if you have questions or suggestions about the structure.
-
 ## JSON format
 
 ### Syntax
 
 All language files are JSON files which means they are JavaScript objects and use a certain syntax which goes like this:
 
-`{
+```json
+{
   "key1": "value1",
   "key2": "value2"
-}`
+}
+```
 
 (Numeration only for illustrative purposes)
 
@@ -53,14 +55,16 @@ Notice that every JSON file starts with an open curly bracket and ends with a cl
 In an object, every property except for the last one needs to end with a comma as you can see above.
 Properties are often objects itself, starting with a key and then opening a new object. Example:
 
-`{
+```json
+{
   "key1":  {
     "key2": "value1",
     "key3": "value2",
     "key4": "value3"
   },
   "key5": "value4"
-}`
+}
+```
 
 As you can see objects are no exception for the commas if they have a property following them inside the same shared parent object.
 
@@ -70,12 +74,14 @@ It's important that values can't be multi-line, so even with a long text you mig
 
 In this project every JSON file must start with a structure like this:
 
-`{
+```json
+{
   "language": "English",
   "lang-code": "en",
   "authors": "waffeln",
   "notes": "",
-  ...`
+  ...
+```
 
 (Of course with the respective language, code and authors!)
 
@@ -94,17 +100,20 @@ For the translations for the this project object nesting and grouping is for one
 
 The first point is easy: instead of having to do this
 
-`{
+```json
+{
   "heading-title": "value1",
   "heading-subtitle": "value2",
   "article-p1": "value3",
   "article-p2": "value4",
   "article-p3": "value5"
-}`
+}
+```
 
 We can do this
 
-`{
+```json
+{
   "heading": {
     "title": "value1",
     "subtitle": "value2"
@@ -114,7 +123,8 @@ We can do this
     "p2": "value4",
     "p3": "value5"
   }
-}`
+}
+```
 
 Looks much nicer, right? Also in supported editors (like Notepad++ or any decent editor) you can fold and unfold these objects for a better overview.
 
@@ -126,18 +136,22 @@ An element in HTML can have very many attributes, such as a title which is the t
 
 A simple example of how to add a translation for a title (normaly you don't have to make this change, it's already done in the English version):
 
-`{
+```json
+{
   "key": "This is the translated content."
-}`
+}
+```
 
 into
 
-`{
+```json
+{
   "key": {
     "title": "Oh look this appears when you hover on this element.",
     "html": "This is the translated content."
   }
-}`
+}
+```
 
 So when we use an object to describe more than just the content of the element, we use the sub-property (key) "html" to tell the translation system that that's what we want to see as the content.
 
@@ -148,7 +162,9 @@ It allows us to use both simple and advanced styling without needing to write ac
 For instance, almost the entire Discord and GitHub markdown syntax is available through Showdown.js.
 
 So you can write this in the translations:
-`"key": "**Hey,** look at this __underlined__ word! And this is *italics*! **Bold** is done like this**. And links are done like [this](http://example.com).`
+```json
+"key": "**Hey,** look at this __underlined__ word! And this is *italics*! **Bold** is done like this**. And links are done like [this](http://example.com).
+```
 
 More examples and explanations coming soon, but you get the idea.
 Also basically all English translation files are also already styled, so you just need to move around the styling for your language phrasing.
