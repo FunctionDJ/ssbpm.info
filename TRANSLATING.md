@@ -37,7 +37,7 @@ Every folder in the root of the project falls into three categories:
   These folders contain the original English version for copying for translation and all the other language files.  
   You should find such a /lang/ folder in every sub-page as well as the root.
 * Other folders  
-  Not relevant for translating, for instance: /modules/, /quickstart/, /quickstart2/
+  Not relevant for translating, for instance: /modules/, /quickstart/, /quickstart2/, /git/
 
 For translation, only the sub-page folders and /lang/ folders are relevant.
 
@@ -179,6 +179,9 @@ we use the sub-property (key) "html" to tell the translation system that that's 
 
 ## Markdown
 
+#### [Full showdown.js documentation](https://github.com/showdownjs/showdown/wiki)
+#### [Live showdown.js editor for testing](https://demo.showdownjs.com/)
+
 All translations are run through a markdown to HTML compiler called Showdown.js.  
 It allows us to use both simple and advanced styling without needing to write actual HTML.  
 For instance, almost the entire Discord and GitHub markdown syntax is available through Showdown.js.
@@ -200,6 +203,15 @@ It gives you full power over how your translation looks and you should utilize i
 Sometimes you need to write a character that is a part of the JSON syntax, most often (always?) the double quote character `"`.  
 When you want to type out this character, you *escape* it with a backslash `\`.
 
+Example:
+```json
+"key": "Fskin always says \"Ike is so broken.\" and it annoys me."
+```
 The backslash is the general escape character in JSON for writing out a character that would usually be interpreted for something like an ending string or other stuff.  
-In order to write a backslash, you just put another backslash in front of it like this `\\`.  
+In order to write a backslash, you just put another backslash in front of it like this `\\`.
+
+These will show up as one backslash each:
+```json
+"key": "Put the file in C:\\Program Files\\"
+```
 As of right now the only characters you need to escape if you want them to appear are double quotes, backslashes, and everything else you don't want interpreted by Showdown.js.
