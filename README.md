@@ -23,13 +23,20 @@ open the httpd.conf in XAMPP and change the document root directory to the folde
 
 ![alt text](git/httpd.conf.png)
 
-**Don't want to clone the repo / Don't like Git?**
+Example configuration (a bit further down in the httpd.conf file):  
+```
+DocumentRoot "D:/Git/ssbpm.info"
+<Directory "D:/Git/ssbpm.info">
+```
+
+***Don't want to clone the repo / Don't like Git?***  
 No problem, we'll gladly provide you with the language files and versions, but you won't be able to see how it looks on the page until you submit it back to someone with push access to the repo.
 
 ## Built With
 
 * [jQuery](https://github.com/jquery/jquery) 3.1.1
 * [Bootstrap](https://github.com/twbs/bootstrap) 4.1.1
+* [showdown.js](https://github.com/showdownjs/showdown)
 
 ## Contributing
 
@@ -42,4 +49,4 @@ Details on contribution will follow soon(tm).
 
 ## License
 
-This project is licensed under the GNU Lesser General Public License version 3 - see the [LICENSE](LICENSE) file for details
+##### This project is licensed under the GNU Lesser General Public License version 3 - see the [LICENSE](LICENSE) file for details
