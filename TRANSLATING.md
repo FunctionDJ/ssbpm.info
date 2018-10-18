@@ -33,7 +33,9 @@ Every folder in the root of the project falls into three categories:
 * Locale folders  
   Always two letters like /de/, /es/ and /it/ (full list above)
 * /lang/ folders  
-  Always accompanied by an index.php file (which contains all the information about a page except for the translations) that shares the same parent folder with it. These folders contain the original English version for copying for translation and all the other language files. You should find such a /lang/ folder in every sub-page as well as the root.
+  Always accompanied by an index.php file (which contains all the information about a page except for the translations) that shares the same parent folder with it.  
+  These folders contain the original English version for copying for translation and all the other language files.  
+  You should find such a /lang/ folder in every sub-page as well as the root.
 * Other folders  
   Not relevant for translating, for instance: /modules/, /quickstart/, /quickstart2/
 
@@ -148,7 +150,7 @@ The second point is also easy but might be confusing on first sight:
 When the translation system looks for a key which is accociated with a string ("key": "value"),  
 it will load that string as the inner content (.innerHTML for anyone who knows JS) of the HTML element.
 
-But if the target key is an object, it will use the properties to *translate* the attributes of the element.
+But if the target key is an object, it will use the properties to *translate* the attributes of the element.  
 An element in HTML can have very many attributes, such as a title which is the text you see, when you hover over it with a mouse,  
 or custom attributes for popovers which are small windows that appear on top or next to an element which explain something.  
 They aren't inside the element in the source code so we need to use this in order to make them translatable.
@@ -179,13 +181,14 @@ we use the sub-property (key) "html" to tell the translation system that that's 
 
 All translations are run through a markdown to HTML compiler called Showdown.js.  
 It allows us to use both simple and advanced styling without needing to write actual HTML.  
-For instance, almost the entire Discord and GitHub markdown syntax is available through Showdown.js.  
+For instance, almost the entire Discord and GitHub markdown syntax is available through Showdown.js.
 
 That means you can write this in the translations:
 ```json
-"key": "**Hey,** look at this __underlined__ word! And this is *italics*! **Bold** is done like this**. And links are done like [this](http://example.com).
+"key": "**Hey,** look at this __underlined__ word! And this is *italics*!
+**Bold** is done like this**. And links are done like [this](http://example.com).
 ```
-More examples and explanations coming soon, but you get the idea.
+More examples and explanations coming soon, but you get the idea.  
 Also basically all English translation files are also already styled, so you just need to move around the styling for your language phrasing.
 
 This is the biggest advantage of having markdown support:  
@@ -198,5 +201,5 @@ Sometimes you need to write a character that is a part of the JSON syntax, most 
 When you want to type out this character, you *escape* it with a backslash `\`.
 
 The backslash is the general escape character in JSON for writing out a character that would usually be interpreted for something like an ending string or other stuff.  
-In order to write a backslash, you just put another backslash in front of it like this `\\`.
+In order to write a backslash, you just put another backslash in front of it like this `\\`.  
 As of right now the only characters you need to escape if you want them to appear are double quotes, backslashes, and everything else you don't want interpreted by Showdown.js.
