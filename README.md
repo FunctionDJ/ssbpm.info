@@ -4,23 +4,24 @@ An informational website about the premier [Super Smash Bros. Brawl](https://en.
 
 This website features most prominently a detailed but user-friendly guide on installing the modification on PAL [Nintendo Wii](https://en.wikipedia.org/wiki/Wii) systems (Europe & Australia).
 
+#### [EU PM Community Discord](https://discord.gg/38tx2gD)  
+(type `.im ssbpm.info` in the #bot-stuff channel to get access to the development channels)
+
 ## Getting Started
 
 ### [Click here to visit the live version of the website](http://ssbpm.info)
 
-Currently the website is hosted for free on bplaced.net.
-
+Currently the website is hosted for free on bplaced.net.  
 The domain ssbpm.info is being provided and paid by waffeln.
 
 ## How to run the website on your computer
 
-As of right now the current development version is in the 'betterphp' branch. So either clone the repo and checkout that branch or switch to the branch in the browser and download a ZIP.
-
-Then download [XAMPP](https://www.apachefriends.org/) and either put the contents of the webpage into C:\xampp\htdocs so that the README.md sits in that folder
-or
+As of right now the current development version is in the 'betterphp' branch. So either clone the repo and checkout that branch or switch to the branch in the browser and download a ZIP.  
+Then download [XAMPP](https://www.apachefriends.org/) and either put the contents of the webpage into C:\xampp\htdocs so that the README.md sits in that folder  
+***or***  
 open the httpd.conf in XAMPP and change the document root directory to the folder where the README.md is.
 
-[image]
+![alt text](git/httpd.conf.png)
 
 **Don't want to clone the repo / Don't like Git?**
 No problem, we'll gladly provide you with the language files and versions, but you won't be able to see how it looks on the page until you submit it back to someone with push access to the repo.
