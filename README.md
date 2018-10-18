@@ -12,6 +12,19 @@ Currently the website is hosted for free on bplaced.net.
 
 The domain ssbpm.info is being provided and paid by waffeln.
 
+## How to run the website on your computer
+
+As of right now the current development version is in the 'betterphp' branch. So either clone the repo and checkout that branch or switch to the branch in the browser and download a ZIP.
+
+Then download [XAMPP](https://www.apachefriends.org/) and either put the contents of the webpage into C:\xampp\htdocs so that the README.md sits in that folder
+or
+open the httpd.conf in XAMPP and change the document root directory to the folder where the README.md is.
+
+[image]
+
+**Don't want to clone the repo / Don't like Git?**
+No problem, we'll gladly provide you with the language files and versions, but you won't be able to see how it looks on the page until you submit it back to someone with push access to the repo.
+
 ## Built With
 
 * [jQuery](https://github.com/jquery/jquery) 3.1.1
