@@ -10,8 +10,8 @@ $body = <<<HTML
 	    <h3 class="text-center my-4">Project M</h3>
 	    <div>
 		<blockquote class="blockquote">
-	      	<p class="mb-0"> Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play. </p>	      
-	      	<footer class="blockquote-footer">Project M Development Team</footer>
+	      	<p class="mb-0"> Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play. </p>
+	      	<footer class="blockquote-footer text-right">Project M Development Team</footer>
 	    	</blockquote>
 	    </div>
 	    <p> Project M is a game modification (mod) of the famous platform fighter Super Smash Bros. Brawl for the Wii. It is a fast-paced and competitive fighting game that is technically deep, but still very accessible and enjoyable to newcomers. The mod modifies the game's physics quite heavily, and also adds a ton of content in the form of playable characters, stages, characters costumes and play modes. All the characters are in some way modified, which makes the entire cast competitively viable. Two good videos presenting the mod (a short one and a longer one) are embedded if you want to know more about it.</p>

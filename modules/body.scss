@@ -22,7 +22,49 @@ html, #body {
 blockquote {
     border-left: 5px solid #eee;
     padding-left: 20px;
+}
+.blockquote-footer {
     font-style: italic;
+}
+.color-info-white {
+    color: black;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 5px 5px 5px 5px;
+    padding: 3px;
+    padding-bottom: 1px;
+}
+.color-info-black {
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 5px 5px 5px 5px;
+    padding: 3px;
+    padding-bottom: 1px;
+}
+.color-info-red {
+//    color: white;
+    background-color: red;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 5px 5px 5px 5px;
+    padding: 3px;
+    padding-bottom: 1px;
+}
+.color-info-blue {
+//    color: white;
+    background-color: deepskyblue;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 5px 5px 5px 5px;
+    padding: 3px;
+    padding-bottom: 1px;
 }
 
 .youtube_row {
