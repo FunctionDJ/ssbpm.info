@@ -17,18 +17,61 @@ html, #body {
 @media (min-width: 576px) {
   #body > div {
     border-radius: 10px 10px 0 0;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px;
-            box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px;
   }
 }
 
 blockquote {
-    border-left: 5px solid #eee;
-    padding-left: 20px;
-    font-style: italic;
+  border-left: 5px solid #eee;
+  padding-left: 20px;
+}
+
+.blockquote-footer {
+  font-style: italic;
+}
+
+.color-info-white {
+  color: black;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 5px 5px 5px 5px;
+  padding: 3px;
+  padding-bottom: 1px;
+}
+
+.color-info-black {
+  color: white;
+  background-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 5px 5px 5px 5px;
+  padding: 3px;
+  padding-bottom: 1px;
+}
+
+.color-info-red {
+  background-color: red;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 5px 5px 5px 5px;
+  padding: 3px;
+  padding-bottom: 1px;
+}
+
+.color-info-blue {
+  background-color: deepskyblue;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 5px 5px 5px 5px;
+  padding: 3px;
+  padding-bottom: 1px;
 }
 
 .youtube_row {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-/*# sourceMappingURL=body.css.map */
