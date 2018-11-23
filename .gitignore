@@ -1,7 +1,11 @@
 # Custom
 
 .tmp.drivedownload/
-
+node_modules/
+.vscode/
+*.html
+*.css
+*.css.map
 
 # Created by https://www.gitignore.io/api/linux,windows,intellij,visualstudiocode,archlinuxpackages
 

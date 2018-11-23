@@ -1,0 +1,140 @@
+<!--
+
+Copyright 2018 waffeln
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-->
+
+doctype html
+html(lang='en')
+  head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    // Bootstrap CSS
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+
+    title PM on PAL (or NTSC)
+
+    style.
+      html {
+        background-color: #eee;
+      }
+      body {
+        background-color: #fff;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      @media (min-width: 576px) {
+        body {
+          margin: 3rem;
+          padding: 1rem;
+          border-radius: 10px;
+        }
+      }
+  body.container
+    div(style="margin-left: 0.5rem")
+      h4.text-center(style="color: #555;") ssbpm.info
+      h3.text-center How to install Project M on a PAL (or NTSC) Wii - abridged
+      small.text-muted.text-center(style="display: block") Disclaimer: Not me or anyone else can be held responsible for damage
+      br
+      p.text-center
+        a(href="https://discord.gg/AeSx36T") EU PM Discord
+        | or 
+        a(href="https://discord.gg/smash") Australian Smash Discord
+        | if you need help!
+      br
+      p Note for NTSC users: This guide isn't confirmed working with NTSC (though in theory you should have no problems). If you have image problems or require 480p output, please change Brawl's video settings in USB Loader GX to Video Mode: "Disc Default" and Dol Video Patch: "Off".
+      br
+      h4 What you'll need
+      span NTSC Brawl ISO file
+      a(style="margin-left: 2rem;" href="http://www.mediafire.com/file/ovo9cxnwlfncaym/Project_M_USB-Loader_All-In-One.zip/file") Download AIO Package
+      a(style="margin-left: 2rem;" href="http://www.mediafire.com/file/81a29y0nf7di2ib/wbfs_file.zip/file") Download WBFS tool
+      br
+      font(size="2") * Includes Project M 3.6-mf, d2x-v10-beta53-alt package (most recommended) and latest pre-configured USB Loader GX
+      br
+      br
+
+      h4 1. Getting LetterBomb
+      ol
+        li Update your Wii to 4.3 and make sure the date is correct
+        li Write down your Wii's MAC address
+        li Go to
+          a(href="https://please.hackmii.com") please.hackmii.com
+          | and enter your MAC address
+          br
+          | select 4.3E for PAL or 4.3U for NTSC and enable "Bundle the HackMii Installer for me!", then do the captcha and cut any of the two wires
+          li Format your 2GB or bigger SD card to FAT32 with the highest Allocation Unit Size you can select
+          li Put the contents of your LetterBomb download into the root of your SD card
+      
+      h4 2. Putting Project M, d2x and a USB Loader on your SD card
+      ol
+        li Download the AIO Package
+        li Extract it's contents into the root of your SD card
+
+      h4 3. Preparing your USB stick with Brawl
+      ol
+        li Download the ISO and the WBFS tool
+        li Drag the ISO on to the wbfs_file.exe
+        br
+        | It will create a folder next to the ISO with the converted files in a folder
+        li Format your 8GB+ USB Stick with FAT32
+        li Make a folder on your USB stick named "wbfs"
+        li Move the created folder by the WBFS tool into the "wbfs" folder on your USB stick
+
+      h4 4. Installing the Homebrew Channel
+      ol
+        li Put the SD card in your Wii
+        li Go to the message board
+        li You will find a LetterBomb icon today or yesterday (if not, check your Wii's date)
+        li Open the letter, your screen will turn black and show a scam warning for 30 seconds
+        li In the HackMii installer, install BootMii to boot2 if possible and if not, install as an IOS
+        li Then install the Homebrew Channel
+        li Exit the installer and you should find yourself in the Homebrew Channel
+
+      h4 5. Installing d2x-cIOS
+      ol
+        li Open the d2x-cIOS installer
+        li Select d2x-v10-beta53-alt, IOS56-64-v5661 for base, 249 as the slot and whatever revision is the largest number
+        | (usually 5 digits, but it shouldn't make a difference which revision you choose)
+        li Press A and A again on the big grid preview to confirm
+        li When done, press B to exit
+
+      h4 6. Running Project M
+      ol
+        li Put the USB into the outermost port on the back of your Wii (the other one doesn't work for this)
+        li Start USB Loader GX from the Homebrew Channel
+        li If everything went well, it should load the USB and show you Super Smash Bros. Brawl
+        li Open Brawl and start the game, this USB Loader is pre-configured so it should automatically launch Project M 🎉
+
+      h4 7. Optional: Install Priiloader to use your Wii without a Wii remote
+      ol
+        li Start Priiloader from the Homebrew Channel
+        li Install Priiloader by pressing A
+        li Once it's installed you back to the Homebrew Channel and then shut down your Wii completely (red light)
+        li Hold the reset button while pressing the power button once (keep holding reset until you see Priiloader)
+        li Go to the settings and set Autoboot to Homebrew Channel (most popular and useful setting)
+      
+      br
+      br
+
+      p.text-center &copy;2018 waffeln, MIT License
+      p.text-center Help: waffeln#0001 on Discord
+      p.text-center Contact: sinusstudios@gmail.com
+
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")

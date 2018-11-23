@@ -1,0 +1,52 @@
+mixin header(lang='en', here)
+
+  if here
+    - var i = {}
+    - i[here] = 'active'
+    //- if here = 'home', then this makes i.home = 'active'
+  header
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+
+      a#logo(href=`${lang}/`)
+        img(src="/assets/logosmall.png" height="45px")
+      // this is for bundling the dropdown toggle menu and the language note to the right
+      .d-flex.justify-content-end
+        span#language-note.nav-link Change language &rarr;
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href=`${lang}/` class=i.home) Home
+          li.nav-item
+            a.nav-link(href=`${lang}/guides/` class=i.guides) Guides
+          li.nav-item
+            a.nav-link(href=`${lang}/faq` class=i.faq) F.A.Q.
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Wiki
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href=`${lang}/wiki/projectm`) Project M
+              a.dropdown-item(href=`${lang}/wiki/softmodding`) Softmodding
+              a.dropdown-item(href=`${lang}/wiki/wiimodels`) Wii models / types
+              a.dropdown-item(href=`${lang}/wiki/homebrewapps`) Homebrew Apps
+              a.dropdown-item(href=`${lang}/wiki/brickprotection`) Brick protection
+              a.dropdown-item(href=`${lang}/wiki/exploits`) Exploits
+              a.dropdown-item(href=`${lang}/wiki/palvsntsc`) PAL vs. NTSC explained
+          li.nav-item
+            a.nav-link(href=`${lang}/contact`) Contact
+          li.nav-item
+            a.nav-link(href=`${lang}/about`) About
+            
+        ul#langdropdown.navbar-nav.mr-auto
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Language
+          .dropdown-menu(aria-labelledby='navbarDropdown')
+            // a.dropdown-item(href=`/da${uri}`) Dansk
+            // a.dropdown-item(href=`/nl${uri}`) Nederlands
+            a.dropdown-item(href=`${uri}`) English
+            // a.dropdown-item(href=`/fi${uri}`) Suomi
+            // a.dropdown-item(href=`/fr${uri}`) Français
+            a.dropdown-item(href=`/de${uri}`) Deutsch
+            // a.dropdown-item(href=`/it${uri}`) Italiano
+            // a.dropdown-item(href=`/es${uri}`) Español
+            // a.dropdown-item(href=`/sv${uri}`) Svenska
