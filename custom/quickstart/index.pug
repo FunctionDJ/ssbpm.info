@@ -1,19 +1,16 @@
-<!--
+//
+  Copyright 2018 waffeln
 
-Copyright 2018 waffeln
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
+  to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+  and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
-to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
--->
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 doctype html
 html(lang='en')
@@ -51,15 +48,16 @@ html(lang='en')
       br
       p.text-center
         a(href="https://discord.gg/AeSx36T") EU PM Discord
-        | or 
+        |  or  
         a(href="https://discord.gg/smash") Australian Smash Discord
-        | if you need help!
+        |  if you need help!
       br
       p Note for NTSC users: This guide isn't confirmed working with NTSC (though in theory you should have no problems). If you have image problems or require 480p output, please change Brawl's video settings in USB Loader GX to Video Mode: "Disc Default" and Dol Video Patch: "Off".
       br
+      br
       h4 What you'll need
       span NTSC Brawl ISO file
-      a(style="margin-left: 2rem;" href="http://www.mediafire.com/file/ovo9cxnwlfncaym/Project_M_USB-Loader_All-In-One.zip/file") Download AIO Package
+      a(style="margin-left: 2rem;" href="http://www.mediafire.com/file/ovo9cxnwlfncaym/Project_M_USB-Loader_All-In-One.zip/file") Download AIO Package*
       a(style="margin-left: 2rem;" href="http://www.mediafire.com/file/81a29y0nf7di2ib/wbfs_file.zip/file") Download WBFS tool
       br
       font(size="2") * Includes Project M 3.6-mf, d2x-v10-beta53-alt package (most recommended) and latest pre-configured USB Loader GX
@@ -70,13 +68,13 @@ html(lang='en')
       ol
         li Update your Wii to 4.3 and make sure the date is correct
         li Write down your Wii's MAC address
-        li Go to
+        li Go to 
           a(href="https://please.hackmii.com") please.hackmii.com
-          | and enter your MAC address
+          |  and enter your MAC address
           br
           | select 4.3E for PAL or 4.3U for NTSC and enable "Bundle the HackMii Installer for me!", then do the captcha and cut any of the two wires
-          li Format your 2GB or bigger SD card to FAT32 with the highest Allocation Unit Size you can select
-          li Put the contents of your LetterBomb download into the root of your SD card
+        li Format your 2GB or bigger SD card to FAT32 with the highest Allocation Unit Size you can select
+        li Put the contents of your LetterBomb download into the root of your SD card
       
       h4 2. Putting Project M, d2x and a USB Loader on your SD card
       ol
@@ -87,8 +85,8 @@ html(lang='en')
       ol
         li Download the ISO and the WBFS tool
         li Drag the ISO on to the wbfs_file.exe
-        br
-        | It will create a folder next to the ISO with the converted files in a folder
+          br
+          | It will create a folder next to the ISO with the converted files in a folder
         li Format your 8GB+ USB Stick with FAT32
         li Make a folder on your USB stick named "wbfs"
         li Move the created folder by the WBFS tool into the "wbfs" folder on your USB stick

@@ -1,13 +1,12 @@
-mixin header(lang='en', here)
-
+mixin header(th, here)
+  - var i = {}
   if here
-    - var i = {}
     - i[here] = 'active'
     //- if here = 'home', then this makes i.home = 'active'
   header
     nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
 
-      a#logo(href=`${lang}/`)
+      a#logo(href=`${lcode}/`)
         img(src="/assets/logosmall.png" height="45px")
       // this is for bundling the dropdown toggle menu and the language note to the right
       .d-flex.justify-content-end
@@ -18,28 +17,28 @@ mixin header(lang='en', here)
       #navbarSupportedContent.collapse.navbar-collapse
         ul.navbar-nav.mr-auto
           li.nav-item
-            a.nav-link(href=`${lang}/` class=i.home) Home
+            a.nav-link(href=`${lcode}/` class=i.home)= th.home
           li.nav-item
-            a.nav-link(href=`${lang}/guides/` class=i.guides) Guides
+            a.nav-link(href=`${lcode}/guides/` class=i.guides)= th.guides
           li.nav-item
-            a.nav-link(href=`${lang}/faq` class=i.faq) F.A.Q.
+            a.nav-link(href=`${lcode}/faq` class=i.faq)= th.faq
           li.nav-item.dropdown
-            a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Wiki
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')= th.wiki
             .dropdown-menu(aria-labelledby='navbarDropdown')
-              a.dropdown-item(href=`${lang}/wiki/projectm`) Project M
-              a.dropdown-item(href=`${lang}/wiki/softmodding`) Softmodding
-              a.dropdown-item(href=`${lang}/wiki/wiimodels`) Wii models / types
-              a.dropdown-item(href=`${lang}/wiki/homebrewapps`) Homebrew Apps
-              a.dropdown-item(href=`${lang}/wiki/brickprotection`) Brick protection
-              a.dropdown-item(href=`${lang}/wiki/exploits`) Exploits
-              a.dropdown-item(href=`${lang}/wiki/palvsntsc`) PAL vs. NTSC explained
+              a.dropdown-item(href=`${lcode}/wiki/projectm`)= th.project
+              a.dropdown-item(href=`${lcode}/wiki/softmodding`)= th.softmodding
+              a.dropdown-item(href=`${lcode}/wiki/wiimodels`)= th.wiimodels
+              a.dropdown-item(href=`${lcode}/wiki/homebrewapps`)= th.homebrewapps
+              a.dropdown-item(href=`${lcode}/wiki/brickprotection`)= th.brickprotection
+              a.dropdown-item(href=`${lcode}/wiki/exploits`)= th.exploits
+              a.dropdown-item(href=`${lcode}/wiki/palvsntsc`)= th.palvsntsc
           li.nav-item
-            a.nav-link(href=`${lang}/contact`) Contact
+            a.nav-link(href=`${lcode}/contact`)= th.contact
           li.nav-item
-            a.nav-link(href=`${lang}/about`) About
+            a.nav-link(href=`${lcode}/about`)= th.about
             
         ul#langdropdown.navbar-nav.mr-auto
-          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Language
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')= th['language-dropdown']
           .dropdown-menu(aria-labelledby='navbarDropdown')
             // a.dropdown-item(href=`/da${uri}`) Dansk
             // a.dropdown-item(href=`/nl${uri}`) Nederlands

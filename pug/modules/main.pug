@@ -3,10 +3,10 @@ include /modules/header.pug
 include /modules/footer.pug
 
 doctype html
-html(lang='en')
+html(lang=lcode)
   +head
   body#body.container.pt-sm-4
     .bg-white
-      +header('en', 'home')
+      +header(th, 'home')
       +body
-      +footer
+      +footer(tf)

@@ -1,15 +1,15 @@
-mixin footer(lang = 'en', addjs)
+mixin footer(tf, addjs)
   footer#main_footer.footer.container(style='background-color: #444')
     .container.d-flex.justify-content-around.text-muted.font-weight-light
-      span &copy;2018 waffeln
+      span= tf.copyright
       span= '|'
       span
-        a(href=`${lang}/about/`)
-          u About
+        a(href=`${lcode}/about/`)
+          u= tf.about
       span= '|'
       span
-        a(href=`${lang}/contact/`)
-          u Contact
+        a(href=`${lcode}/contact/`)
+          u= tf.contact
   
   // jQuery first, then Popper.js, then Bootstrap JS
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
@@ -19,7 +19,7 @@ mixin footer(lang = 'en', addjs)
   // showdown.js for markdown
   script(src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js" integrity="sha256-dwhppIrxD8qC6lNulndZgtIm4XBU9zoMd9OUoXzIDAE=" crossorigin="anonymous")
   
-  // custom JS
-  script(src="/modules/language.js")
+  //- custom JS
   if addjs
+    // custom JS
     script(src=addjs)
