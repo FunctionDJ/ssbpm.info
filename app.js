@@ -13,34 +13,7 @@ const sd = (md) => {
 
 const renderLang = ['en', 'de'];
 
-file.walkSync('pug\\', (dirPath, dirs, files) => {
-  for(var key in files) {
-    let file = files[key];
-    let filepath = path.join(__dirname, dirPath, file);
-    let basepath = path.join(__dirname, dirPath);
-    let includePath = path.join(__dirname, 'pug');
-    if (path.extname(filepath) == '.pug' && dirPath != 'pug\\modules') {
-      renderPug(file, filepath, basepath, includePath);
-    }
-  }
-})
-
-process.exit();
-
-
-file.walk('./pug/', (nullValue, dirPath, dirs, files) => {
-  for(var key in files) {
-    let file = files[key];
-    if (path.extname(file) = '.pug') {
-      renderLang.forEach((lcode) => {
-
-        const tbody = JSON.parse(fs.readFileSync(`${__dirname}/lang/${lcode}.json`));
-      });
-    }
-  }
-});
-
-const renderPug = (file, filepath, basepath, includePath) => {
+const renderPug = (file, filepath, basepath, includePath, relativePath) => {
   renderLang.forEach((lcode) => {
 
     // get main translation
@@ -61,17 +34,47 @@ const renderPug = (file, filepath, basepath, includePath) => {
       th: theader,
       tf: tfooter,
       basedir: includePath,
-      sd: sd
+      sd: sd,
+      pretty: true
     });
 
-    let destPath = path.join(basepath, path.basename(filepath) + '.html');
+    let basePathExplode = includePath.split(path.sep);
+    basePathExplode.pop(); // remove last array element
+    let newBasePath = path.join(...basePathExplode);
 
-    fs.writeFile(destPath, html, function(err) {
+    let relPathExplode = relativePath.split(path.sep);
+    relPathExplode.shift(); //remove first array element
+    let destPath = path.join(newBasePath, 'html', ...relPathExplode);
+
+    let destFile = path.join(destPath, path.basename(filepath, '.pug') + `-${lcode}` + '.html')
+
+    fs.mkdirSync(destPath, {recursive: true}, (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+
+    fs.writeFileSync(destFile, html, function(err) {
       if (err) {
         console.log(err);
       }
 
-      console.log(`${destPath} saved`);
-    })
+      console.log(`${destFile} saved`);
+    });
   })
 }
+
+file.walkSync('pug\\', (dirPath, dirs, files) => {
+  for(var key in files) {
+    console.log(`Key: ${key}`);
+    console.log(`File: ${files[key]}`);
+    console.log(``);
+    let file = path.basename(files[key]);
+    let filepath = path.join(__dirname, dirPath, file);
+    let basepath = path.join(__dirname, dirPath);
+    let includePath = path.join(__dirname, 'pug');
+    if (path.extname(filepath) == '.pug' && dirPath != 'pug\\modules') {
+      renderPug(file, filepath, basepath, includePath, dirPath);
+    }
+  }
+})
