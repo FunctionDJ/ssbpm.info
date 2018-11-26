@@ -63,17 +63,14 @@ const renderPug = (file, filepath, basepath, includePath, relativePath) => {
       if (err) {
         console.log(err);
       }
-
-      console.log(`${destFile} saved`);
     });
+
+    console.log(`Rendered ${destFile}`);
   })
 }
 
 file.walkSync('pug\\', (dirPath, dirs, files) => {
   for(var key in files) {
-    console.log(`Key: ${key}`);
-    console.log(`File: ${files[key]}`);
-    console.log(``);
     let file = path.basename(files[key]);
     let filepath = path.join(__dirname, dirPath, file);
     let basepath = path.join(__dirname, dirPath);
