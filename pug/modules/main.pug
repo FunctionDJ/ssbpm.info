@@ -8,9 +8,9 @@ include /modules/footer.pug
 
 doctype html
 html(lang=htmlcode)
-  +head
+  +head(title, addcss)
   body#body.container.pt-sm-4
     .bg-white
       +header(th, here, uri)
       +body
-      +footer(tf)
+      +footer(tf, addjs)

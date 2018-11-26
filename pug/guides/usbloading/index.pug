@@ -1,0 +1,21 @@
+- var here = 'usbloading'
+- var uri = '/guides/usbloading/'
+- var title = 'USB Loading'
+- var addcss = 'guide.css'
+- var addjs = 'guide.js'
+
+mixin body
+  #content.d-flex.justify-content-center(style='flex:1')
+    .w-100
+      a(href=`${lcode}${uri}`) ← Go back to start
+      #guide-window.card
+        .card-body
+          #pages-container
+            #start
+              h5#card-title Start - Getting to where you need
+              p.card-text Maybe you
+
+          a#prevPageButton.btn-btn-primary(href="#page-1" onclick="prevPage()") Previous
+          a#nextPageButton.btn-btn-primary(href="#page-3" onclick="nextPage()") Next
+
+include /modules/main.pug
