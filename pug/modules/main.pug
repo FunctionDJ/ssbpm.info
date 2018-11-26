@@ -1,12 +1,16 @@
+if (lcode == 'en')
+  - var htmlcode = 'en'
+  - lcode = ''
+
 include /modules/head.pug
 include /modules/header.pug
 include /modules/footer.pug
 
 doctype html
-html(lang=lcode)
+html(lang=htmlcode)
   +head
   body#body.container.pt-sm-4
     .bg-white
-      +header(th, here)
+      +header(th, here, uri)
       +body
       +footer(tf)
