@@ -4,6 +4,7 @@
 node_modules/
 .vscode/
 html/
+*.html
 *.css
 *.css.map
 
