@@ -44,9 +44,14 @@ const renderPug = (file, filepath, basepath, includePath, relativePath) => {
 
     let relPathExplode = relativePath.split(path.sep);
     relPathExplode.shift(); //remove first array element
-    let destPath = path.join(newBasePath, 'html', ...relPathExplode);
 
-    let destFile = path.join(destPath, path.basename(filepath, '.pug') + `-${lcode}` + '.html')
+    if (lcode == 'en') {
+      var destPath = path.join(newBasePath, 'html', ...relPathExplode);
+    } else {
+      var destPath = path.join(newBasePath, 'html', lcode, ...relPathExplode);
+    }
+
+    let destFile = path.join(destPath, path.basename(filepath, '.pug') + '.html')
 
     fs.mkdirSync(destPath, {recursive: true}, (err) => {
       if (err) {
