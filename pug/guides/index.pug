@@ -3,7 +3,7 @@
 - var title = 'Guides'
 
 mixin body
-  .pt-3.mx-5.pb-5(style='flex:1')
+  #pagecontent.pt-3.mx-5.pb-5(style='flex:1')
     h3.text-center.my-4= t.title
     p
       span.h5= t.hackless.title
@@ -13,7 +13,7 @@ mixin body
         | #{line}
         br
     .w-100.text-center
-      a.btn.btn-primary.my-2(href=lpath + '/guides/hackless/')= t.hackless.button
+      a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/hackless/')= t.hackless.button
     p
       span.h5= t.homebrew.title
       span  NTSC
@@ -22,7 +22,7 @@ mixin body
         | #{line}
         br
     .w-100.text-center
-      a.btn.btn-primary.my-2(href=lpath + '/guides/homebrew/')= t.homebrew.button
+      a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/homebrew/')= t.homebrew.button
     p
       span.h5= t.usbloading.title
       span= ' ' + t.usbloading.region
