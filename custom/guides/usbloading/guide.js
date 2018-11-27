@@ -1,5 +1,10 @@
 console.log(`guide.js v2 loaded`);
 
+const getAnchorCard = () => {
+  let hash = window.location.hash;
+  return hash.substr(1, hash.length);
+}
+
 var currentCard = {
   id: "start"
 };
@@ -22,7 +27,11 @@ const nextPageButton = {
   },
   load: function() {
     prevPageButton.addPrev(currentCard.id);
-    cards[this.nextPage].show();
+    if (cards[this.nextPage] != null) {
+      cards[this.nextPage].show();
+    } else {
+      throw `Error: The request card '${this.nextPage}' doesn't exist.`;
+    }
     this.disable();
   }
 }
@@ -158,7 +167,6 @@ class card {
 }
 
 (() => { // run after full page load
-  console.log(`Current window hash: ${window.location.hash}`);
 
   // initial choice click event handler
   $(`#pages-container > * > .radio-input input`).click(() => {
