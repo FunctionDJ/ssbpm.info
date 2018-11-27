@@ -1,3 +1,49 @@
 {
-  
+  "cards": {
+    "start": [
+      "Start - Wo's als Erstes lang geht",
+      "Vielleicht hast du schon ein paar Schritte erledigt und kannst ein paar Dinge in diesem Guide überspringen",
+      ["Meine Wii ist nicht gesoftmodded (hat keinen Homebrew Channel)",
+      "Ich habe den Homebrew Channel installiert",
+      "Ich kann Spiele mit USB Loading laden"]
+    ],
+    "updating": [
+      "Wii Update",
+      "Gehe in die Wii Einstellungen und update deine Wii. Dafür brauchst du eine Internet Verbindung. Überprüfe danach, ob deine Wii auf der Version 4.3 ist.",
+      ["Meine Wii ist jetzt auf 4.3 geupdated",
+      "Ich kann meine Wii nicht mit dem Internet verbinden oder habe einen anderen Fehler."]
+    ],
+    "fresh-start": [
+      "Neuer Start: Überprüfen der Wii version",
+      "In diesem Schritt finden wir heraus, welche Wii System Version auf deiner Wii läuft und wie du sie updaten kannst, wenn es erforderlich ist.",
+      ["Ich weiß nicht, welche Version meine Wii hat",
+      "Meine Wii hat die Version 4.3",
+      "Meine Wii hat eine Version unter 4.3"]
+    ],
+    "find-wii-version": [
+      "Finding your Wii version",
+      "In order to find your Wii version you need to go into Settings -> Wii System and you should see your Wii system version at the top right of the screen. The letter at the end tells you which region the Wii is from. U is USA, E is Europe (and Australia and some parts of South America), J is Japane and K is Korea.<br/>If it says 4.3, then your Wii is up to date. If it's lower, it's outdated",
+      ["My version starts with 4.3",
+      "My version does not start with 4.3"]
+    ],
+    "updating2": [
+      "Updating your Wii",
+      "Go into the Wii settings and update your Wii. You need an internet connection for this. Check if your Wii is version 4.3 after this.",
+      ["My Wii is now updated to 4.3",
+      "I can't connect my Wii to the internet or i'm getting an error",
+      "Parental Access is preventing me from updating or setting up an internet connection"]
+    ],
+    "letterbomb": [
+      "Using Letterbomb to install the Homebrew Channel",
+      "Now we'll be using Letterbomb to actually softmod your Wii and install the Homebrew channel (and BootMii)."
+    ],
+    "prepare-sd": [
+      "Preparing your SD card",
+      ""
+    ],
+    "prepare-usb": [
+      "Preparing your USB device",
+      "Put the Brawl ISO on your FAT32 formatted USB device (min. 8GB, max 2TB partition) using the wbfs_file tool"
+    ]
+  }
 }
