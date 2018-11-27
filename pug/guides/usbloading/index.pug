@@ -2,7 +2,7 @@
 - var uri = '/guides/usbloading/'
 - var title = 'USB Loading'
 - var addcss = 'guide.css'
-- var addjs = 'guide.js'
+- var addjs = ['guide2.js', 'cards.js']
 
 mixin body
   #content.d-flex.justify-content-center(style='flex:1')
@@ -12,10 +12,18 @@ mixin body
         .card-body
           #pages-container
             #start
-              h5#card-title Start - Getting to where you need
-              p.card-text Maybe you
+              h5#card-title UNCHANGED Start - Getting to where you need
+              p.card-text Maybe you already have some steps done and can skip some things in this guide.
+              label.radio-input(for="ui-1")
+                input(type="radio" id="ui-1" value="fresh-start" name="#start")
+                | I have never softmodded my Wii.
+              br
+              label.radio-input(for="ui-2")
+                input(type="radio" id="ui-2" value="prepare-sd" name="#start")
+                | I have a Homebrew Channel installed.
+              br
 
-          a#prevPageButton.btn-btn-primary(href="#page-1" onclick="prevPage()") Previous
-          a#nextPageButton.btn-btn-primary(href="#page-3" onclick="nextPage()") Next
+          a#prevPageButton.btn.btn-primary(href="#page-1" onclick="prevPageButton.load()") Previous
+          a#nextPageButton.btn.btn-primary.float-right.disabled(href="#page-3" onclick="nextPageButton.load()") Next
 
 include /modules/main.pug
