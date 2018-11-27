@@ -24,3 +24,9 @@ mixin footer(tf, addjs)
     // custom JS
     each script in addjs
       script(src=script)
+
+  // enable popovers everywhere
+  script
+    | $(function () {
+    |   $('[data-toggle="popover"]').popover()
+    | })
