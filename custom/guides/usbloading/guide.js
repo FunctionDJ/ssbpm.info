@@ -30,6 +30,7 @@ const nextPageButton = {
     if (cards[this.nextPage] != null) {
       cards[this.nextPage].show();
     } else {
+      alert(`Woah there cowboy!\nSorry, something went wrong. Attempted to load\n    '${this.nextPage}'\nbut it doesn't exit. Please contact someone from\n    http://ssbpm.info/contact/\nand give them this error message. THANK YOU.`)
       throw `Error: The request card '${this.nextPage}' doesn't exist.`;
     }
     this.disable();
