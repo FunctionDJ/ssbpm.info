@@ -7,9 +7,12 @@
   "title": "Impressum - ssbpm.info",
 
   "about": "Impressum",
-  "1": "ssbpm.info ist eine informationelle Website über die Video-Spiel-Modifikation \"Project M\" des 2008 erschienenen Nintendo Wii Spiels Super Smash Bros. Brawl. Alle Personen in Verbindung mit dieser Website können nicht für eventuelle Schäden durch die auf dieser Platform veröffentlichten Anleitungen haftbar gemacht werden.",
-  "2": "ssbpm.info wird von der europäischen Project M Community verwaltet.",
-  "3": "Für Details, Informationen und Anfragen, bitte waffeln [kontaktieren](/contact/) (Haupt-Entwickler).",
-  "4": "&copy; 2018 waffeln",
-  "5": "Dieses Projekt ist unter der GNU PL v3 License lizensiert."
+
+  "lines": [
+    "ssbpm.info ist eine informationelle Website über die Video-Spiel-Modifikation \"Project M\" des 2008 erschienenen Nintendo Wii Spiels Super Smash Bros. Brawl. Alle Personen in Verbindung mit dieser Website können nicht für eventuelle Schäden durch die auf dieser Platform veröffentlichten Anleitungen haftbar gemacht werden.",
+    "ssbpm.info wird von der europäischen Project M Community verwaltet.",
+    "Für Details, Informationen und Anfragen, bitte waffeln [kontaktieren](/contact/) (Haupt-Entwickler).",
+    "&copy; 2018 waffeln",
+    "Dieses Projekt ist unter der GNU PL v3 License lizensiert."
+  ]
 } 

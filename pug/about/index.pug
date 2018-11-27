@@ -1,0 +1,18 @@
+- var here = 'about'
+- var uri = '/about/'
+- var title = t.title
+
+mixin body
+  .m-5(style='flex:1')
+    h5= t.about
+    p!= sd(t.lines.shift())
+    br
+    p
+      span!= sd(t.lines.shift())
+      br
+      span!= sd(t.lines.shift())
+    br
+    p!= sd(t.lines.shift())
+    p!= sd(t.lines.shift())
+
+include /modules/main.pug
