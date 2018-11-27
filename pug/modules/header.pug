@@ -6,7 +6,7 @@ mixin header(th, here, uri)
   header
     nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
 
-      a#logo(href=`${lcode}/`)
+      a#logo(href=`${lpath}/`)
         img(src="/assets/logosmall.png" height="45px")
       // this is for bundling the dropdown toggle menu and the language note to the right
       .d-flex.justify-content-end
@@ -17,25 +17,25 @@ mixin header(th, here, uri)
       #navbarSupportedContent.collapse.navbar-collapse
         ul.navbar-nav.mr-auto
           li.nav-item
-            a.nav-link(href=`${lcode}/` class=i.home)= th.home
+            a.nav-link(href=`${lpath}/` class=i.home)= th.home
           li.nav-item
-            a.nav-link(href=`${lcode}/guides/` class=i.guides)= th.guides
+            a.nav-link(href=`${lpath}/guides/` class=i.guides)= th.guides
           li.nav-item
-            a.nav-link(href=`${lcode}/faq` class=i.faq)= th.faq
+            a.nav-link(href=`${lpath}/faq` class=i.faq)= th.faq
           li.nav-item.dropdown
             a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')= th.wiki
             .dropdown-menu(aria-labelledby='navbarDropdown')
-              a.dropdown-item(href=`${lcode}/wiki/projectm`)= th.project
-              a.dropdown-item(href=`${lcode}/wiki/softmodding`)= th.softmodding
-              a.dropdown-item(href=`${lcode}/wiki/wiimodels`)= th.wiimodels
-              a.dropdown-item(href=`${lcode}/wiki/homebrewapps`)= th.homebrewapps
-              a.dropdown-item(href=`${lcode}/wiki/brickprotection`)= th.brickprotection
-              a.dropdown-item(href=`${lcode}/wiki/exploits`)= th.exploits
-              a.dropdown-item(href=`${lcode}/wiki/palvsntsc`)= th.palvsntsc
+              a.dropdown-item(href=`${lpath}/wiki/projectm`)= th.project
+              a.dropdown-item(href=`${lpath}/wiki/softmodding`)= th.softmodding
+              a.dropdown-item(href=`${lpath}/wiki/wiimodels`)= th.wiimodels
+              a.dropdown-item(href=`${lpath}/wiki/homebrewapps`)= th.homebrewapps
+              a.dropdown-item(href=`${lpath}/wiki/brickprotection`)= th.brickprotection
+              a.dropdown-item(href=`${lpath}/wiki/exploits`)= th.exploits
+              a.dropdown-item(href=`${lpath}/wiki/palvsntsc`)= th.palvsntsc
           li.nav-item
-            a.nav-link(href=`${lcode}/contact`)= th.contact
+            a.nav-link(href=`${lpath}/contact`)= th.contact
           li.nav-item
-            a.nav-link(href=`${lcode}/about`)= th.about
+            a.nav-link(href=`${lpath}/about`)= th.about
             
         ul#langdropdown.navbar-nav.mr-auto
           li.nav-item.dropdown

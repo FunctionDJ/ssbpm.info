@@ -1,13 +1,13 @@
 - var here = 'usbloading'
 - var uri = '/guides/usbloading/'
 - var title = 'USB Loading'
-- var addcss = 'guide.css'
-- var addjs = ['guide.js', 'cards.js']
+- var addcss = uri + 'guide.css'
+- var addjs = [uri + 'guide.js', uri + 'cards.js']
 
 mixin body
   #content.d-flex.justify-content-center(style='flex:1')
     .w-100
-      a(href=`${lcode}${uri}`) ← Go back to start
+      a(href= lpath + uri) ← Go back to start
       #guide-window.card
         .card-body
           #pages-container
@@ -25,5 +25,10 @@ mixin body
 
           a#prevPageButton.btn.btn-primary(href="#page-1" onclick="prevPageButton.load()") Previous
           a#nextPageButton.btn.btn-primary.float-right.disabled(href="#page-3" onclick="nextPageButton.load()") Next
+
+          - var tPlain = JSON.stringify(t.cards)
+          script
+            | const lcode = '#{lcode}';
+            | const c = JSON.parse(`!{tPlain}`);
 
 include /modules/main.pug

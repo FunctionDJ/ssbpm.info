@@ -7,6 +7,6 @@ mixin body
     img.img-fluid.mb-4(src="/assets/logosmall.png")
     p!= sd(t.intro['1'])
     p!= sd(t.intro['2'])
-    a.btn.btn-primary.btn-lg.mt-4(href='/guides/')!= t.intro.guidebutton
+    a.btn.btn-primary.btn-lg.mt-4(href= lpath + '/guides/')!= t.intro.guidebutton
 
 include /modules/main.pug
