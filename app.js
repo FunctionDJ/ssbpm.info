@@ -16,20 +16,42 @@ const renderLang = ['en', 'de'];
 const renderPug = (file, filepath, basepath, includePath, relativePath) => {
   renderLang.forEach((lcode) => {
 
-    // get main translation
     const tbodyPath = path.join(basepath, 'lang', `${lcode}.json`);
+    const theaderPath = path.join(includePath, 'modules', 'header-lang', `${lcode}.json`);
+    const tfooterPath = path.join(includePath, 'modules', 'footer-lang', `${lcode}.json`);
+
+    // if any translation file is missing
+    if (!fs.existsSync(tbodyPath)) {
+      console.log(`ERROR: Couldn't render ${filepath} for language '${lcode}' because ${tbodyPath} is missing! Skipping this file...`);
+      return
+    }
+    if (!fs.existsSync(theaderPath)) {
+      console.log(`ERROR: Couldn't render ${filepath} for language '${lcode}' because ${theaderPath} is missing! Skipping this file...`);
+      return
+    }
+    if (!fs.existsSync(tfooterPath)) {
+      console.log(`ERROR: Couldn't render ${filepath} for language '${lcode}' because ${tfooterPath} is missing! Skipping this file...`);
+      return
+    }
+
+    // get main translation
     const tbody = JSON.parse(fs.readFileSync(tbodyPath));
 
     // get header translation
-    const theaderPath = path.join(includePath, 'modules', 'header-lang', `${lcode}.json`);
     const theader = JSON.parse(fs.readFileSync(theaderPath));
 
     // get footer translation
-    const tfooterPath = path.join(includePath, 'modules', 'footer-lang', `${lcode}.json`);
     const tfooter = JSON.parse(fs.readFileSync(tfooterPath));
+
+    if (lcode == 'en') {
+      var lpath = '';
+    } else {
+      var lpath = '/' + lcode;
+    }
 
     let html = pug.renderFile(filepath, {
       lcode: lcode,
+      lpath: lpath,
       t: tbody,
       th: theader,
       tf: tfooter,
