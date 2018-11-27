@@ -86,3 +86,9 @@ for (var key in cards) {
 }
 
 console.log(`card.js loaded with ${cardAmount} cards.`);
+
+// attempt to load card that's in the window hash
+if (cards[getAnchorCard()]) {
+  console.log(`Card '${getAnchorCard()} loaded since it was found in the hash`)
+  cards[getAnchorCard()].show();
+}
