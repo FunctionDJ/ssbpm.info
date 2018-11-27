@@ -6,15 +6,23 @@
 
   "contact": "Kontakt",
 
-  "waffeln": {
-    "name": "waffeln",
-    "role": "Haupt-Entwickler & Instandhaltung",
-    "info": "Mag das Spiel *sehr* gerne."
+  "platforms": {
+    "twitter": "Twitter",
+    "email": "E-Mail"
   },
 
-  "titibandit": {
-    "name": "Titibandit",
-    "role": "Gründer & Mitwirkender",
-    "info": "-/-"
-  }
+  "cards": [
+    {
+      "name": "waffeln",
+      "role": "Haupt-Entwickler & Instandhaltung",
+      "info": "Mag das Spiel *sehr* gerne.",
+      "twitter": "https://twitter.com/wffln",
+      "email": "sinusstudios@gmail.com"
+    },
+    {
+      "name": "Titibandit",
+      "role": "Gründer & Mitwirkender",
+      "info": "-/-"
+    }
+  ]
 }

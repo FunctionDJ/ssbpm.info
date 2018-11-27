@@ -1,0 +1,20 @@
+- var here = 'faq'
+- var uri = '/faq/'
+- var title = t.title
+
+mixin body
+  #pagecontent.container.my-5(style='flex:1')
+    h3.text-center.my-4= t.contact
+    .d-flex.justify-content-center.flex-wrap
+      each card in t.cards
+        .card.m-3(style="width: 20rem")
+          .card-body
+            h5.card-title= card.name
+            h6.card-subtitle.mb-2.text-muted= card.role
+            p.card-text!= sd(card.info)
+            if (card.twitter)
+              a.card-link(href= card.twitter)= t.platforms.twitter
+            if (card.email)
+              a.card-link(href= 'mailto:' + card.email)= t.platforms.email
+
+include /modules/main.pug

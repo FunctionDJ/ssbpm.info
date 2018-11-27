@@ -1,0 +1,14 @@
+- var here = 'faq'
+- var uri = '/faq/'
+- var title = t.title
+
+mixin body
+  .content.p-5(style='flex:1')
+    each block in t.blocks
+      h5= block[0]
+      p.pb-2
+        each paragraph in block[1]
+          | #{paragraph}
+          br
+
+include /modules/main.pug
