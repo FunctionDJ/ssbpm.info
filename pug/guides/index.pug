@@ -13,7 +13,8 @@ mixin body
         | #{line}
         br
     .w-100.text-center
-      a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/hackless/')= t.hackless.button
+      div(title="Sorry, this guide isn't done yet!")
+        a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/hackless/')= t.hackless.button
     p
       span.h5= t.homebrew.title
       span  NTSC
@@ -22,7 +23,8 @@ mixin body
         | #{line}
         br
     .w-100.text-center
-      a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/homebrew/')= t.homebrew.button
+      div(title="Sorry, this guide isn't done yet!")
+        a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/homebrew/')= t.homebrew.button
     p
       span.h5= t.usbloading.title
       span= ' ' + t.usbloading.region
