@@ -15,4 +15,23 @@ header {
     color: black;
     margin-right: 1rem !important; // Bootstrap 4 things (sighs)
   }
+
+  .dropdown > a:not([class~=dropdown]):not([class~='dropdown-toggle-split']) {
+    padding-right: 0 !important;
+  }
+
+  .dropdown-toggle-split {
+    padding-left: 0 !important;
+    margin-left: 4.08px;
+    cursor: pointer;
+    color: rgba(255,255,255,.75) !important;
+    border-radius: 3px;
+    padding: 4px 5px 10px 5px !important;
+    line-height: 11px;
+    height: 19px;
+
+    &:hover {
+      background-color: hsla(0, 0%, 0%, 0.4);
+    }
+  }
 }

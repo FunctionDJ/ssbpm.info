@@ -18,14 +18,23 @@ mixin header(th, here, uri)
         ul.navbar-nav.mr-auto
           li.nav-item
             a.nav-link(href=`${lpath}/` class=i.home)= th.home
-          li.nav-item
+          li.nav-item.dropdown(style="display: inline-flex; align-items: center")
             a.nav-link(href=`${lpath}/guides/` class=i.guides)= th.guides
+            a#guidesDropdown.nav-link.dropdown-toggle.dropdown-toggle-split(
+              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+            .dropdown-menu(aria-labelledby="guidesDropdown")
+              a.dropdown-item(href=`${lpath}/guides/hackless/`) Hackless
+              a.dropdown-item(href=`${lpath}/guides/homebrew/`) Homebrew
+              a.dropdown-item(href=`${lpath}/guides/usbloading/`) USB Loading
           li.nav-item
             a.nav-link(href=`${lpath}/faq` class=i.faq)= th.faq
           li.nav-item.dropdown
-            a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')= th.wiki
-            .dropdown-menu(aria-labelledby='navbarDropdown')
-              a.dropdown-item(href=`${lpath}/wiki/projectm`)= th.project
+            a#wikiDropdown.nav-link.dropdown-toggle(
+              href='#' role='button'
+              data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'
+              )= th.wiki
+            .dropdown-menu(aria-labelledby='wikiDropdown')
+              a.dropdown-item(href=`${lpath}/wiki/projectm`)= th.projectm
               a.dropdown-item(href=`${lpath}/wiki/softmodding`)= th.softmodding
               a.dropdown-item(href=`${lpath}/wiki/wiimodels`)= th.wiimodels
               a.dropdown-item(href=`${lpath}/wiki/homebrewapps`)= th.homebrewapps
