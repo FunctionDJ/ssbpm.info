@@ -1,15 +1,14 @@
 mixin footer(tf, addjs)
-  footer#main_footer.footer.container(style='background-color: #444')
-    .container.d-flex.justify-content-around.text-muted.font-weight-light
-      span!= tf.copyright
-      span= '|'
-      span
-        a(href=`${lpath}/about/`)
-          u= tf.about
-      span= '|'
-      span
-        a(href=`${lpath}/contact/`)
-          u= tf.contact
+  footer#main_footer.footer.container.d-flex.justify-content-around.text-muted.font-weight-light(style='background-color: #444')
+    span!= tf.copyright
+    span= '|'
+    span
+      a(href=`${lpath}/about/`)
+        u= tf.about
+    span= '|'
+    span
+      a(href=`${lpath}/contact/`)
+        u= tf.contact
   
   // jQuery first, then Popper.js, then Bootstrap JS
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
