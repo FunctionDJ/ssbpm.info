@@ -3,13 +3,8 @@ const fs = require('fs');
 const pug = require('pug');
 const file = require('file');
 
-var showdown = require('showdown'),
+var showdown = require('./node_modules/custom-showdown/dist/showdown.min.js'),
     converter = new showdown.Converter();
-
-const sd = (md) => {
-  let raw = converter.makeHtml(md);
-  return raw.substring(3, raw.length - 4)
-}
 
 const renderLang = ['en', 'de'];
 
@@ -47,6 +42,11 @@ const renderPug = (file, filepath, basepath, includePath, relativePath) => {
       var lpath = '';
     } else {
       var lpath = '/' + lcode;
+    }
+
+    let sd = (md) => {
+      let raw = converter.makeHtml(md, lpath);
+      return raw.substring(3, raw.length - 4)
     }
 
     let html = pug.renderFile(filepath, {
