@@ -1,0 +1,33 @@
+- var here = 'finder'
+- var uri = '/guides/finder/'
+- var title = 'Guide Finder'
+- var addcss = uri + '/guides/guide.css'
+- var addjs = [uri + '/guides/guide.js', uri + '/guides/finder/cards.js']
+
+mixin body
+  #pagecontent.p-3(style='flex:1')
+    .w-100
+      a(href= lpath + uri) ← Go back to start
+      #guide-window.card
+        .card-body
+          #pages-container
+            #start
+              h5#card-title UNCHANGED Start - Finding the right guide for you
+              p.card-text What region is your Wii from?
+              label.radio-input(for="ui-1")
+                input(type="radio" id="ui-1" value="" name="#start")
+                | NTSC-U (USA and some others)
+              label.radio-input(for="ui-2")
+                input(type="radio" id="ui-2" value="" name="#start")
+                | NTSC-J (Japan)
+              label.radio-input(for="ui-3")
+                input(type="radio" id="ui-3" value="" name="#start")
+                | NTSC-K (Korea)
+              label.radio-input(for="ui-4")
+                input(type="radio" id="ui-4" value="" name="#start")
+                | PAL (Europe, Australia and South America)
+
+          a#prevPageButton.btn.btn-primary(href="#page-1" onclick="prevPageButton.load()") Previous
+          a#nextPageButton.btn.btn-primary.float-right.disabled(href="#page-3" onclick="nextPageButton.load()") Next
+
+include /modules/main.pug
