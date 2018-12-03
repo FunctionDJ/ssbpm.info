@@ -59,6 +59,17 @@ cards[n] = new card(
   n, "p-usb", "d2x-cIOS", c[n].shift(), c[n].shift(),
 );
 
+n = "d2x-cios";
+cards[n] = new card(
+  n, "d2x", "test-run", c[n].shift(), c[n].shift()
+);
+
+n = "test-run";
+cards[n] = new card(
+  n, "tr", null, c[n].shift(), c[n].shift(),
+  getChoices(n, "success", "fix-video-mode", "fix-game-speed", "fix-pm-loading")
+);
+
 // end of card generation
 
 let cardAmount = 0;
