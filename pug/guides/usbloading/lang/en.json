@@ -44,6 +44,18 @@
     "prepare-usb": [
       "Preparing your USB device",
       "Put the Brawl ISO on your FAT32 formatted USB device (min. 8GB, max 2TB partition) using the wbfs_file tool"
+    ],
+    "d2x-cios": [
+      "Installing d2x-cIOS",
+      "(What is d2x, waninkoko etc.)"
+    ],
+    "test-run": [
+      "Testing if Project M works",
+      "In theory, everthing should work now. Open USB Loader GX from your Homebrew channel and launch Brawl. Below are a issue symptoms and how to solve them.",
+      ["It works!",
+      "I get a black screen or a black and white image",
+      "The game seems to run slower than it's supposed to",
+      "It starts Brawl"]
     ]
   }
 }
