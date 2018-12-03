@@ -1,11 +1,11 @@
 - var here = 'usbloading'
 - var uri = '/guides/usbloading/'
 - var title = 'USB Loading'
-- var addcss = uri + 'guide.css'
-- var addjs = [uri + 'guide.js', uri + 'cards.js']
+- var addcss = uri + '/guides/guide.css'
+- var addjs = [uri + '/guides/guide.js', uri + '/guides/usbloading/cards.js']
 
 mixin body
-  #content.d-flex.justify-content-center(style='flex:1')
+  #pagecontent.p-3(style='flex:1')
     .w-100
       a(href= lpath + uri) ← Go back to start
       #guide-window.card

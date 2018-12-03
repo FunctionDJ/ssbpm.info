@@ -3,7 +3,7 @@
 - var title = 'Guides'
 
 mixin body
-  #pagecontent.pt-3.mx-5.pb-5(style='flex:1')
+  #pagecontent.p-3.p-md-4.p-lg-5(style='flex:1')
     h3.text-center.my-4= t.title
     p
       span.h5= t.hackless.title
@@ -12,7 +12,7 @@ mixin body
       each line in t.hackless.text
         | #{line}
         br
-    .w-100.text-center
+    .w-100.text-center.pb-3
       div(title="Sorry, this guide isn't done yet!")
         a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/hackless/')= t.hackless.button
     p
@@ -22,7 +22,7 @@ mixin body
       each line in t.homebrew.text
         | #{line}
         br
-    .w-100.text-center
+    .w-100.text-center.pb-3
       div(title="Sorry, this guide isn't done yet!")
         a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/homebrew/')= t.homebrew.button
     p

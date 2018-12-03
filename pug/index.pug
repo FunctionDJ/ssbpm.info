@@ -2,7 +2,7 @@
 - var uri = '/'
 
 mixin body
-  .container.text-center.pt-3(style='flex:1')
+  #pagecontent.p-3.text-center(style='flex:1')
     h3.mt-4!= sd(t.welcome)
     img.img-fluid.mb-4(src="/assets/logosmall.png")
     p!= sd(t.intro['1'])

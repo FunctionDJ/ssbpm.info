@@ -3,7 +3,9 @@
 - var title = t.title
 
 mixin body
-  .content.p-5(style='flex:1')
+  #pagecontent.p-3.p-md-4.p-lg-5(style='flex:1')
+    h3.text-center= t.headline
+    p.text-center.lead.mb-4= t.subtitle
     each block in t.blocks
       h5= block[0]
       p.pb-2
