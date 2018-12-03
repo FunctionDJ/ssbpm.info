@@ -1,9 +1,20 @@
 header {
+  .navbar {
+    padding: 0.3rem 0.6rem;
+  }
+
   #logo {
-    margin-right: 1rem;
+    margin-right: 0.3rem;
+
+    @media (min-width: 992px) {
+      margin-right: 1rem;
+    }
   }
 
   #language-note {
+    padding: 0.5rem;
+    font-size: 10pt;
+
     @media (min-width: 992px) {
       display: none;
     }
