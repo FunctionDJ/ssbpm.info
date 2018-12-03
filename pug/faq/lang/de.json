@@ -1,0 +1,31 @@
+{
+  "language": "Deutsch",
+  "lang-code": "de",
+  "authors": "waffeln",
+  "notes": "",
+
+  "title": "F.A.Q. - ssbpm.info",
+  "headline": "F.A.Q.",
+  "subtitle": "\"Frequently asked questions\" (Häufig gestellte Fragen)",
+  "blocks": [
+    [
+      "Ist das Softmodden / Hacken der Wii illegal?",
+      ["Nein. Wii Hacking ist nicht illegal. Niemand kann dich dafür anzeigen.",
+      "Damit bricht man nur Nintendo's Nutzungsbedingungen, was bedeutet, dass sie dir keine Dienste mehr für die Wii anbieten müssen, wie Online-Multiplayer oder eine Reparatur im Garantiefall (heutzutage beides eh nicht mehr verfügbar).",
+      "In Europa macht das Softmodden nicht einmal die Garantie ungültig, außer der Hersteller kann nachweisen, dass der Defekt durch die Software Modifikation entstanden ist!",
+      "Im Endeffekt verlierst du also nichts, wenn du deine Wii softmoddest oder hackst."]
+    ],
+    [
+      "Warum heißt es \"Softmodding\" und nicht \"Hacking\"?",
+      ["Technisch gesehen ist Softmodding auch Hacking, aber Hacking kann auch (traditionellerweise) Hardware Modifikationen meinen, wenn man über eine Konsole spricht.",
+      "Softmodding - wie der Name sagt - bedeutet also, dass man nur mit Software ein System verändert, ohne einen Modchip zu installieren oder andere Arten externer Modifikation.",
+      "Das Coole am Softmodden ist, dass man seine Wii nicht öffnen, seltene oder teure Modchips kaufen oder seine Wii dem Risiko von physischem Schaden aussetzen muss.",
+      "Softmodding ist deutlich sicherer und einfacher, da man fast alles mit einer SD Karte und einem Computer mit Internet machen kann.",
+      "Das ist der größte Vorteil der Nintendo Wii da die Modding Community sehr viel reverse-engineered und Sicherheitslücken in der Software gefungen hat zum Ausführen von fremden Code. Andere Konsolen wie die XBOX360 erfordern immer eine Hardware-Modifikation, um sie zu hacken."]
+    ],
+    [
+      "Ist Softmodden schwer?",
+      ["Absolut nicht. Jeder mit ein wenig Wissen darüber, wie man richtig Dateien vom Internet herunterlädt und mit Windows Explorer / MacOS Finder / Linux File Explorer umgeht sollte keine Probleme haben."]
+    ]
+  ]
+}
