@@ -3,7 +3,7 @@ const fs = require('fs');
 const pug = require('pug');
 const file = require('file');
 
-var showdown = require('./node_modules/custom-showdown/dist/showdown.min.js'),
+var showdown = require('./custom/modules/custom-showdown.js'),
     converter = new showdown.Converter();
 
 const renderLang = ['en', 'de'];
