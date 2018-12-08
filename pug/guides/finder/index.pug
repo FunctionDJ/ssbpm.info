@@ -1,8 +1,8 @@
 - var here = 'finder'
 - var uri = '/guides/finder/'
 - var title = 'Guide Finder'
-- var addcss = uri + '/guides/guide.css'
-- var addjs = [uri + '/guides/guide.js', uri + '/guides/finder/cards.js']
+- var addcss = '/guides/guide.css'
+- var addjs = ['/guides/guide.js', uri + 'cards.js']
 
 mixin body
   #pagecontent.p-3(style='flex:1')
@@ -15,19 +15,23 @@ mixin body
               h5#card-title UNCHANGED Start - Finding the right guide for you
               p.card-text What region is your Wii from?
               label.radio-input(for="ui-1")
-                input(type="radio" id="ui-1" value="" name="#start")
+                input(type="radio" id="ui-1" value="ntsc-u" name="#start")
                 | NTSC-U (USA and some others)
+              br
               label.radio-input(for="ui-2")
-                input(type="radio" id="ui-2" value="" name="#start")
-                | NTSC-J (Japan)
+                input(type="radio" id="ui-2" value="pal-k-j" name="#start")
+                | PAL (Europe, Australia and South America) or NTSC-K (Korea)
+              br
               label.radio-input(for="ui-3")
-                input(type="radio" id="ui-3" value="" name="#start")
-                | NTSC-K (Korea)
-              label.radio-input(for="ui-4")
-                input(type="radio" id="ui-4" value="" name="#start")
-                | PAL (Europe, Australia and South America)
-
+                input(type="radio" id="ui-3" value="idk" name="#start")
+                | I don't know / How can i find out the region?
+              br
           a#prevPageButton.btn.btn-primary(href="#page-1" onclick="prevPageButton.load()") Previous
           a#nextPageButton.btn.btn-primary.float-right.disabled(href="#page-3" onclick="nextPageButton.load()") Next
+
+          - var tPlain = JSON.stringify(t.cards)
+          script
+            | const lcode = '#{lcode}';
+            | const c = JSON.parse(`!{tPlain}`);
 
 include /modules/main.pug
