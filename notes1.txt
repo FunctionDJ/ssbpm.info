@@ -1,0 +1,19 @@
+Guide Finder
+
+Finding out the region
+- NTSC-U:
+  NTSC-U Brawl disc?
+  - Yes:
+    1-2GB SD card?
+    - Yes:
+      > Hackless
+    - No:
+      > Letter / Bannerbomb
+  - No:
+    8GB+ USB device?
+    - Yes:
+      > USB Loading
+    - No:
+      > ISO building with CFG Loader
+- PAL, NTSC-K or NTSC-J:
+  > USB Loading

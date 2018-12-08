@@ -1,0 +1,25 @@
+{
+  "cards": {
+    "start": [
+      "Start - Finding the right guide for you",
+      "What region is your Wii from?",
+      ["NTSC-U (USA and some others)",
+      "NTSC-J (Japan)",
+      "PAL (Europe, Australia and South America) or NTSC-K (Korea)"]
+    ],
+    "ntsc-u": [
+      "NTSC-U Card Title",
+      "NTSC-U Card Text",
+      ["Choice-1",
+      "Choice-2"]
+    ],
+    "pal-k-j": [
+      "PAL or J or K Title",
+      "... Text"
+    ],
+    "idk": [
+      "Idk title",
+      "idk text"
+    ]
+  }
+}
