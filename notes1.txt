@@ -17,3 +17,10 @@ Finding out the region
       > ISO building with CFG Loader
 - PAL, NTSC-K or NTSC-J:
   > USB Loading
+
+USB Loading
+  8GB+ USB device?
+  - Yes:
+    > USB Loading
+  - No:
+    > ISO building with CFG Loader
