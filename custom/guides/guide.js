@@ -58,6 +58,123 @@ const prevPageButton = {
   }
 }
 
+class card2 {
+  constructor(id, short, next, choices) {
+    this.id = id;
+    this.short = short;
+    this.next = next;
+    
+    this.title = c[id].shift();
+    this.text = c[id].shift();
+    
+    this.choices = [];
+
+    for(let i = 0; i < choices.length; i++) {
+      this.choices.push({
+        target: choices[i],
+        text: c[id][0][i]
+      });
+    }
+  }
+  
+  get HTMLobj() {
+    let required = ["id", "short", "title", "text"];
+    for(let i = 0; i < required.length; i++) {
+      if (this[required[i]] == null) {
+        throw `Error: this.${required[i]} undefined or null.`;
+      }
+    }
+
+    if (this.next == null && this.choices == null) {
+      throw `Error: Both this.next and this.choices undefined or null.`;
+    }
+
+    let base = document.createElement("div");
+    base.setAttribute("id", "start");
+    base.setAttribute("style", "display: none");
+
+    let title = document.createElement("h5");
+    title.setAttribute("class", "card-title");
+    let titleText = document.createTextNode(this.title);
+    title.appendChild(titleText);
+    base.appendChild(title);
+
+    let text = document.createElement("p");
+    text.setAttribute("class", "card-text");
+    let textText = document.createTextNode(this.text);
+    text.appendChild(textText);
+    base.appendChild(text);
+
+    if (this.choices) {
+      for (let i = 0; i < this.choices.length; i++) {
+        let label = document.createElement("label");
+        label.setAttribute("for", `${this.short}-${i}`);
+        label.setAttribute("class", "radio-input");
+
+        let input = document.createElement("input");
+        input.setAttribute("type", "radio");
+        input.setAttribute("id", `${this.short}-${i}`);
+        input.setAttribute("value", `${this.choices[i].target}`);
+        input.setAttribute("name", `${this.id}`);
+        label.appendChild(input);
+
+        let labelText = document.createTextNode(this.choices[i].text);
+        label.appendChild(labelText);
+
+        base.appendChild(label);
+
+        let lineBreak = document.createElement("br");
+        base.appendChild(lineBreak);
+      }
+    }
+
+    return base;
+  }
+
+  show() {
+    // for prevPageButton
+    currentCard = this;
+
+    // remove all click handlers
+    $('.radio-input input').off('click');
+
+    let pagesContainer = $('#pages-container');
+
+    // render HTML from object
+    let html = this.HTMLobj;
+
+    // get all children of the pagesContainer
+    // should only be one child but this clears everything
+    let currentPage = $('#pages-container > *');
+
+    // hide every child using jQuery fade out
+    currentPage.hide('fast', () => {
+      pagesContainer.empty();
+      pagesContainer.html(html);
+
+      let newPage = $('#pages-container > *');
+
+      newPage.show('fast', () => {
+        if (this.next) {
+          nextPageButton.setNext(this.next);
+        }
+
+        // if there are still entries in the queue for previous pages
+        if (prevPageButton.queue.length) prevPageButton.enable();
+
+        // add click handlers for new choices even if they don't exist
+        $(`#pages-container > * > .radio-input input`).click(() => {
+          // if any of the buttons on this page are checked
+          if ($(`#pages-container > * > .radio-input input`).is(':checked')) {
+            let buttonValue = $(`#pages-container > * > .radio-input input:checked`).val();
+            nextPageButton.setNext(buttonValue);
+          }
+        });
+      });
+    });
+  }
+}
+
 // card class
 class card {
   constructor(id, short, next, title, text, choices) {
@@ -177,4 +294,6 @@ class card {
       nextPageButton.setNext(buttonValue);
     }
   });
+
+  let karte = new card2('start', 'hi', null, ['ntsc-u', 'ntsc-j', 'pal']); 
 })();

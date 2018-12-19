@@ -26,9 +26,17 @@ const newCard = (id, short, next, choices) => {
   )
 }
 
-newCard("start", "st", null, ["ntsc-u", "pal-k-j", "idk"]);
-newCard("ntsc-u", "nu", null, ["choice-1", "choice-2"])
-newCard("pal-k-j", "pkj");
+const newCard2 = (id, short, next, choices) => {
+  cards[id] = new card2(id, short, next, choices);
+}
+
+newCard("start", "st", null, ["ntsc-u", "usb-loading", "idk"]);
+
+newCard("ntsc-u", "nu", null, ["ntsc-u-disc", "usb-loading"])
+newCard("usb-loading", "pkj");
+newCard2("idk", "idk", null, ["ntsc-u", "pal-k-j"]);
+
+newCard2("ntsc-u-disc", "nu-d", null, ["ss-hackless", "lb-bb-hackless"]);
 
 // end of card generation
 
