@@ -1,0 +1,3 @@
+- no USB or no SD
+- broken SD or USB slot
+- money for USB sticks
