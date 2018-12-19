@@ -92,10 +92,10 @@ const renderPug = (file, filepath, basepath, includePath, relativePath) => {
       var destPath = path.join(newBasePath, 'html', lcode, ...relPathExplode);
     }
 
-    let destFile = '/' + path.join(destPath, path.basename(filepath, '.pug') + '.html')
+    let destFile = path.join(destPath, path.basename(filepath, '.pug') + '.html')
 
     try {
-      fs.mkdirSync('/' + destPath, {recursive: true});
+      fs.mkdirSync(destPath, {recursive: true});
     } catch (err) {
       if (err.code !== 'EEXIST') {
         throw err;
@@ -104,7 +104,7 @@ const renderPug = (file, filepath, basepath, includePath, relativePath) => {
       }
     }
 
-    fs.writeFileSync('/' + destFile, html, function(err) {
+    fs.writeFileSync(destFile, html, function(err) {
       if (err) {console.log(err);}
     });
 
