@@ -7,5 +7,11 @@ sass .\custom\modules\main.scss .\custom\modules\main.css
 Write-Host 'Copying customs...'
 xcopy .\custom .\html /EXCLUDE:excludedFilesFromCustom.txt /S /I /R /Y /Q
 
+# /S exclude empty directories
+# /I force assume directory
+# /R overwrite read-only files
+# /Y skip file overwrite prompts
+# /Q skip OSD for copying files
+
 Write-Host 'Rendering Pug files...'
 node app.js
