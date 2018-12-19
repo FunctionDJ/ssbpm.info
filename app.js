@@ -1,7 +1,26 @@
 const path = require('path');
 const fs = require('fs');
+const fse = require('fs-extra');
 const pug = require('pug');
 const file = require('file');
+
+const sass = require('node-sass');
+
+console.log('Copying custom showdown.js file...');
+fs.copyFileSync('./node_modules/custom_showdown/dist/showdown.min.js', './custom/modules/custom-showdown.js');
+
+console.log('Converting SCSS to CSS...');
+var result = sass.renderSync({
+  file: './custom/modules/main.scss'
+});
+fs.writeFileSync('./custom/modules/main.css', result.css, (error) => {
+  if (error) throw error;
+});
+
+console.log('Copying customs...');
+fse.copySync('./custom/', './html/', {
+  overwrite: true
+});
 
 var showdown = require('./custom/modules/custom-showdown.js'),
     converter = new showdown.Converter();
@@ -63,7 +82,7 @@ const renderPug = (file, filepath, basepath, includePath, relativePath) => {
     let basePathExplode = includePath.split(path.sep);
     basePathExplode.pop(); // remove last array element
     let newBasePath = path.join(...basePathExplode);
-
+    
     let relPathExplode = relativePath.split(path.sep);
     relPathExplode.shift(); //remove first array element
 
@@ -73,25 +92,27 @@ const renderPug = (file, filepath, basepath, includePath, relativePath) => {
       var destPath = path.join(newBasePath, 'html', lcode, ...relPathExplode);
     }
 
-    let destFile = path.join(destPath, path.basename(filepath, '.pug') + '.html')
+    let destFile = '/' + path.join(destPath, path.basename(filepath, '.pug') + '.html')
 
-    fs.mkdirSync(destPath, {recursive: true}, (err) => {
-      if (err) {
-        console.log(err);
+    try {
+      fs.mkdirSync('/' + destPath, {recursive: true});
+    } catch (err) {
+      if (err.code !== 'EEXIST') {
+        throw err;
+      } else {
+        console.log(`/${destPath} already exists`);
       }
-    });
+    }
 
-    fs.writeFileSync(destFile, html, function(err) {
-      if (err) {
-        console.log(err);
-      }
+    fs.writeFileSync('/' + destFile, html, function(err) {
+      if (err) {console.log(err);}
     });
 
     console.log(`Rendered ${destFile}`);
   })
 }
 
-file.walkSync('pug\\', (dirPath, dirs, files) => {
+file.walkSync('pug', (dirPath, dirs, files) => {
   for(var key in files) {
     let file = path.basename(files[key]);
     let filepath = path.join(__dirname, dirPath, file);
