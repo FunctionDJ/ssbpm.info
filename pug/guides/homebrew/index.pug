@@ -1,0 +1,34 @@
+- var here = 'homebrew'
+- var uri = '/guides/homebrew/'
+- var title = 'Homebrewing'
+- var addcss = '/guides/guide.css'
+- var addjs = ['/guides/guide.js', uri + 'cards.js']
+
+mixin body
+  #pagecontent.p-3(style='flex:1')
+    .w-100
+      a(href= lpath + uri) ← Go back to start
+      #guide-window.card
+        .card-body
+          #pages-container
+            #start
+              h5#card-title UNCHANGED Start - Getting to where you need
+              p.card-text Maybe you already have some steps done and can skip some things in this guide.
+              label.radio-input(for="ui-1")
+                input(type="radio" id="ui-1" value="fresh-start" name="#start")
+                | I have never softmodded my Wii.
+              br
+              label.radio-input(for="ui-2")
+                input(type="radio" id="ui-2" value="prepare-sd" name="#start")
+                | I have a Homebrew Channel installed.
+              br
+
+          a#prevPageButton.btn.btn-primary(href="#page-1" onclick="prevPageButton.load()") Previous
+          a#nextPageButton.btn.btn-primary.float-right.disabled(href="#page-3" onclick="nextPageButton.load()") Next
+
+          - var tPlain = JSON.stringify(t.cards)
+          script
+            | const lcode = '#{lcode}';
+            | const c = JSON.parse(`!{tPlain}`);
+
+include /modules/main.pug

@@ -64,8 +64,8 @@ class card2 {
     this.short = short;
     this.next = next;
     
-    this.title = c[id].shift();
-    this.text = c[id].shift();
+    this.title = c[id].title;
+    this.text = c[id].text;
     
     this.choices = [];
 
@@ -85,50 +85,20 @@ class card2 {
       }
     }
 
-    if (this.next == null && this.choices == null) {
-      throw `Error: Both this.next and this.choices undefined or null.`;
-    }
-
-    let base = document.createElement("div");
-    base.setAttribute("id", "start");
-    base.setAttribute("style", "display: none");
-
-    let title = document.createElement("h5");
-    title.setAttribute("class", "card-title");
-    let titleText = document.createTextNode(this.title);
-    title.appendChild(titleText);
-    base.appendChild(title);
-
-    let text = document.createElement("p");
-    text.setAttribute("class", "card-text");
-    let textText = document.createTextNode(this.text);
-    text.appendChild(textText);
-    base.appendChild(text);
+    let base = new element("div", {"id": "start", "style": "display: none"});
+    base.attachChild(new new element("h5", {"class": "card-title"}, this.title));
+    base.attachChild(new element("p", {"class": "card-text"}, this.text));
 
     if (this.choices) {
       for (let i = 0; i < this.choices.length; i++) {
-        let label = document.createElement("label");
-        label.setAttribute("for", `${this.short}-${i}`);
-        label.setAttribute("class", "radio-input");
-
-        let input = document.createElement("input");
-        input.setAttribute("type", "radio");
-        input.setAttribute("id", `${this.short}-${i}`);
-        input.setAttribute("value", `${this.choices[i].target}`);
-        input.setAttribute("name", `${this.id}`);
-        label.appendChild(input);
-
-        let labelText = document.createTextNode(this.choices[i].text);
-        label.appendChild(labelText);
-
-        base.appendChild(label);
-
-        let lineBreak = document.createElement("br");
-        base.appendChild(lineBreak);
+        let label = new element("label", {"for": `${this.short}-${i}`, "class": "radio-input"}, this.choices[i].text);
+        label.attachChild(new element("input", {"type": "radio", "id": `${this.short}-${i}`, "value": `${this.choices[i].target}`, "name": this.id}));
+        base.attachChild(label);
+        base.attachChild(new element("br"));
       }
     }
 
-    return base;
+    return base.element;
   }
 
   show() {
