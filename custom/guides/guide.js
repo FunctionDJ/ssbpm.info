@@ -5,6 +5,17 @@ const getAnchorCard = () => {
   return hash.substr(1, hash.length);
 }
 
+const sdConverter = new showdown.Converter;
+
+const sd = (md) => {
+  let raw = sdConverter.makeHtml(md);
+  if (raw.startsWith("<p>") && raw.endsWith("</p>")) {
+    return raw.substring(3, raw.length - 4)
+  } else {
+    return raw
+  }
+}
+
 var currentCard = {
   id: "start"
 };
@@ -58,7 +69,7 @@ const prevPageButton = {
   }
 }
 
-class card2 {
+class card {
   constructor(id, short, next, choices) {
     this.id = id;
     this.short = short;
@@ -69,15 +80,25 @@ class card2 {
     
     this.choices = [];
 
-    for(let i = 0; i < choices.length; i++) {
-      this.choices.push({
-        target: choices[i],
-        text: c[id][0][i]
-      });
+    if (choices) {
+      for(let i = 0; i < choices.length; i++) {
+        this.choices.push({
+          target: choices[i],
+          text: c[id].choices[choices[i]]
+        });
+        /*
+          okay c is the translation object
+          the id is something like "start", one of the cards generated as properties of c
+          it's choices property holds the keys that are also the targets for identification
+          so we plug the actual key we have which is choices[i] into choices' array
+          in order to get it's text whew
+        */
+      }
     }
   }
   
   get HTMLobj() {
+    // check if all required attributes were set
     let required = ["id", "short", "title", "text"];
     for(let i = 0; i < required.length; i++) {
       if (this[required[i]] == null) {
@@ -86,13 +107,26 @@ class card2 {
     }
 
     let base = new element("div", {"id": "start", "style": "display: none"});
-    base.attachChild(new new element("h5", {"class": "card-title"}, this.title));
-    base.attachChild(new element("p", {"class": "card-text"}, this.text));
+    let title = new element("h5", {"class": "card-title"});
+    title.attachHTML(sd(this.title));
+    let text = new element("p", {"class": "card-text"});
+    text.attachHTML(sd(this.text));
+    base.attachChild(title);
+    base.attachChild(text);
 
     if (this.choices) {
       for (let i = 0; i < this.choices.length; i++) {
-        let label = new element("label", {"for": `${this.short}-${i}`, "class": "radio-input"}, this.choices[i].text);
-        label.attachChild(new element("input", {"type": "radio", "id": `${this.short}-${i}`, "value": `${this.choices[i].target}`, "name": this.id}));
+        let label = new element("label", {
+          "for": `${this.short}-${i}`, "class": "radio-input"
+        });
+
+        label.attachChild(new element("input", {
+          "type": "radio", "id": `${this.short}-${i}`,
+          "value": `${this.choices[i].target}`, "name": this.id
+        }));
+
+        label.attachHTML(sd(this.choices[i].text));
+
         base.attachChild(label);
         base.attachChild(new element("br"));
       }
@@ -145,8 +179,14 @@ class card2 {
   }
 }
 
+var cards = {};
+
+const newCard = (...args) => {
+  cards[args[0]] = new card(...args);
+}
+
 // card class
-class card {
+class cardold {
   constructor(id, short, next, title, text, choices) {
     this.id = id;
     this.short = short;
@@ -264,6 +304,20 @@ class card {
       nextPageButton.setNext(buttonValue);
     }
   });
-
-  let karte = new card2('start', 'hi', null, ['ntsc-u', 'ntsc-j', 'pal']); 
 })();
+
+const cardsCallback = () => {
+  var cardAmount = 0;
+
+  for (var key in cards) {
+    cardAmount++;
+  }
+
+  console.log(`card.js loaded with ${cardAmount} cards.`);
+
+  // attempt to load card that's in the window hash
+  if (cards[getAnchorCard()]) {
+    console.log(`Card '${getAnchorCard()}' loaded since it was found in the hash`)
+    cards[getAnchorCard()].show();
+  }
+}
