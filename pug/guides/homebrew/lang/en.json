@@ -3,30 +3,40 @@
     "start": {
       "title": "Homebrewing your Wii: Step 1 - Method of choice",
       "text": "There are many ways you can install the Homebrew channel. It requires you to use any of the numerous exploits that the Wii has. All of these exploits either require an SD card or a Wii connected to the internet. We recommend using Letterbomb or Bannerbomb (very similar, but for 4.3 and 4.0-4.2 respectively) since it's very reliable and using an SD card is also the easiest way of running Project M. ",
-      "choices": ["I got a Wii-compatible SD card",
-      "I don't know if my SD card is compatible",
-      "I want to use the internet-based exploit"]
+      "choices": {
+        "bomb": "I got a Wii-compatible SD card",
+        "sd-check": "I don't know if my SD card is compatible",
+        "str2hax": "I want to use the internet-based exploit"
+      }
     },
-    "bomb": [
-      "Step 2 (SD) - Finding your Wii's system version",
-      "The easiest SD-based exploits are Letterbomb for 4.3 and Bannerbomb for 4.0-4.2, since they don't require a game exploit like Twilight Hack or SmashStack. Please go into your settings and check what system version your Wii has.",
-      ["4.3",
-      "4.0, 4.1 or 4.2",
-      "Below 4.0"]
-    ],
-    "letterbomb-1": [
-      "Step 3 (Letterbomb) - Finding your Wii's MAC adress",
-      "Letterbomb works on all latest (4.3) Wii system versions, but it requires your Wii's MAC adress to work. This is a code that is unique for every Wii and while it is mainly used for internet connectivity, your Wii doesn't need an internet connection for this to work. Every has this MAC adress even without ever being connected to the internet. To find this adress, go to the Wii settings, then internet, and then information. You don't need to write this down, but keep the screen open for the next step."
-    ],
-    "letterbomb-2": [
-      "Step 4 (Letterbomb) - Downloading the exploit and the Homebrew channel",
-      "Now you need to go to please.hackmii and enter your MAC adress there. Make sure you select the right region! (You can find it in your system settings at the top) Also check \"Bundle Hackmii installer for me\" and cut any of the two wires (doesn't matter which one)",
-      ["I got the Letterbomb.zip file downloaded",
-      "The website is down"]
-    ],
-    "wiibrand": [
-      "Step 4.5 (Letterbomb - Using wiibrand instead of please.hackmii",
-      "So unfortunately "
-    ]
+    "bomb": {
+      "title": "Step 2 (SD) - Finding your Wii's system version",
+      "text": "The easiest SD-based exploits are Letterbomb for 4.3 and Bannerbomb for 4.0-4.2, since they don't require a game exploit like Twilight Hack or SmashStack. Please go into your settings and check what system version your Wii has.",
+      "choices": {
+        "letterbomb-1": "4.3",
+        "bannerbomb": "4.0, 4.1 or 4.2",
+        "???": "Below 4.0"
+      }
+    },
+    "letterbomb-1": {
+      "title": "Step 3 (Letterbomb) - Finding your Wii's MAC adress",
+      "text": "Letterbomb works on all latest (4.3) Wii system versions, but it requires your Wii's MAC adress to work. This is a code that is unique for every Wii and while it is mainly used for internet connectivity, your Wii doesn't need an internet connection for this to work. Every has this MAC adress even without ever being connected to the internet. To find this adress, go to the Wii settings, then internet, and then information. You don't need to write this down, but keep the screen open for the next step."
+    },
+    "letterbomb-2": {
+      "title": "Step 4 (Letterbomb) - Downloading the exploit and the Homebrew channel",
+      "text": "Now you need to go to please.hackmii and enter your MAC adress there. Make sure you select the right region! (You can find it in your system settings at the top) Also check 'Bundle Hackmii installer for me' and cut any of the two wires (doesn't matter which one)",
+      "choices": {
+        "letterbomb-3": "I got the Letterbomb.zip file downloaded",
+        "wiibrand": "The website is down"
+      }
+    },
+    "wiibrand": {
+      "title": "Step 4.5 (Letterbomb - Using wiibrand instead of please.hackmii",
+      "text": "..."
+    },
+    "str2hax": {
+      "title": "Step 2 (str2hax): Changing the Wii's DNS",
+      "text": "...\\n\\n###### [Source / more information on this exploit](https://gbatemp.net/threads/a-channel-less-sd-less-entry-point-str2hax.523210/)"
+    }
   }
 }
