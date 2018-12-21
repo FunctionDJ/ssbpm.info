@@ -1,3 +1,5 @@
+console.log('constructor.js loaded');
+
 class element {
   constructor(name, attributes, text) {
     this.element = document.createElement(name);
@@ -17,5 +19,9 @@ class element {
 
   attachChild(element) {
     this.element.appendChild(element.element);
+  }
+
+  attachHTML(html) {
+    this.element.insertAdjacentHTML('beforeend', html);
   }
 }
