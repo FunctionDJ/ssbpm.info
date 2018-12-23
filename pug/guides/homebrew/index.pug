@@ -33,6 +33,6 @@ mixin body
           - var tPlain = JSON.stringify(t.cards)
           script
             | const lcode = '#{lcode}';
-            | const c = JSON.parse(`!{tPlain}`);
+            | const c = !{tPlain};
 
 include /modules/main.pug
