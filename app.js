@@ -64,7 +64,6 @@ const renderPug = (file, filepath, basepath, includePath, relativePath) => {
     }
 
     let sd = (md) => {
-      md = md.replace("\\n", '\n');
       let raw = converter.makeHtml(md, lpath);
       if (raw.startsWith("<p>") && raw.endsWith("</p>")) {
         return raw.substring(3, raw.length - 4)
