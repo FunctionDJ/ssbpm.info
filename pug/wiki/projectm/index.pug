@@ -4,12 +4,12 @@
 
 mixin body
   #pagecontent.p-3(style='flex:1')
-    h3.text-center.my-4 Project M
+    h3.text-center.my-4!= sd(t.headline)
     div
       blockquote.blockquote
-        p.mb-0 Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play.
-        footer.blockquote-footer.text-right Project M Development Team
-    p Project M is a game modification (mod) of the famous platform fighter Super Smash Bros. Brawl for the Wii. It is a fast-paced and competitive fighting game that is technically deep, but still very accessible and enjoyable to newcomers. The mod modifies the game's physics quite heavily, and also adds a ton of content in the form of playable characters, stages, characters costumes and play modes. All the characters are in some way modified, which makes the entire cast competitively viable. Two good videos presenting the mod (a short one and a longer one) are embedded if you want to know more about it.
+        p.mb-0!= sd(t.quote)
+        footer.blockquote-footer.text-right!= sd(t["quote-author"])
+    p!= sd(t.description)
     .row.youtube_row
       .col-md-6
         .embed-responsive.embed-responsive-16by9
@@ -17,6 +17,6 @@ mixin body
       .col-md-6
         .embed-responsive.embed-responsive-16by9
           iframe.embed-responsive-item(src="https://www.youtube.com/embed/OmUH5rmZyps")
-    p  The game has a really passionate community that is still actively playing, organizing tournaments, and creating enjoyable content. Have a look at the PM subreddit, or check out the newly created community-content Hub: Project M Nexus!
+    p!= sd(t["sub-text"])
 
 include /modules/main.pug
