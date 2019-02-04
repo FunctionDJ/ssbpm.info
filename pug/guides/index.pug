@@ -6,6 +6,15 @@ mixin body
   #pagecontent.p-3.p-md-4.p-lg-5(style='flex:1')
     h3.text-center.my-4= t.title
     p
+      span.h5= t.homebrew.title
+      span  NTSC
+    p
+      each line in t.homebrew.text
+        | #{line}
+        br
+    .w-100.text-center
+      a.btn.btn-primary.my-2(href=lpath + '/guides/homebrew/')= t.homebrew.button
+    p
       span.h5= t.hackless.title
       span  NTSC
     p
@@ -16,15 +25,15 @@ mixin body
       div(title="Sorry, this guide isn't done yet!")
         a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/hackless/')= t.hackless.button
     p
-      span.h5= t.homebrew.title
+      span.h5= t["homebrew-disc"].title
       span  NTSC
     p
-      each line in t.homebrew.text
+      each line in t["homebrew-disc"].text
         | #{line}
         br
     .w-100.text-center.pb-3
       div(title="Sorry, this guide isn't done yet!")
-        a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/homebrew/')= t.homebrew.button
+        a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/homebrew/')= t["homebrew-disc"].button
     p
       span.h5= t.usbloading.title
       span= ' ' + t.usbloading.region
@@ -33,6 +42,7 @@ mixin body
         | #{line}
         br
     .w-100.text-center
-      a.btn.btn-primary.my-2(href=lpath + '/guides/usbloading/')= t.usbloading.button
+      div(title="Sorry, this guide isn't done yet!")
+        a.btn.btn-primary.my-2.disabled(href=lpath + '/guides/usbloading/')= t.usbloading.button
 
 include /modules/main.pug
