@@ -1,4 +1,13 @@
 mixin header(th, here, uri)
+  -
+    const isInArray = (array, value) => {
+      for(i in array) {
+        if (array[i] === value) {
+          return true
+        }
+      }
+      return false
+    }
   - var i = {}
   if here
     - i[here] = 'active'
@@ -23,9 +32,9 @@ mixin header(th, here, uri)
             a#guidesDropdown.nav-link.dropdown-toggle.dropdown-toggle-split(
               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
             .dropdown-menu(aria-labelledby="guidesDropdown")
-              a.dropdown-item(href=`${lpath}/guides/hackless/`) Hackless
+              //a.dropdown-item(href=`${lpath}/guides/hackless/`) Hackless
               a.dropdown-item(href=`${lpath}/guides/homebrew/`) Homebrew
-              a.dropdown-item(href=`${lpath}/guides/usbloading/`) USB Loading
+              //a.dropdown-item(href=`${lpath}/guides/usbloading/`) USB Loading
           li.nav-item
             a.nav-link(href=`${lpath}/faq` class=i.faq)= th.faq
           li.nav-item.dropdown
@@ -50,12 +59,21 @@ mixin header(th, here, uri)
           li.nav-item.dropdown
             a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')= th['language-dropdown']
             .dropdown-menu.dropdown-menu-right(aria-labelledby='navbarDropdown')
-              // a.dropdown-item(href=`/da${uri}`) Dansk
-              // a.dropdown-item(href=`/nl${uri}`) Nederlands
-              a.dropdown-item(href=`${uri}`) English
-              // a.dropdown-item(href=`/fi${uri}`) Suomi
-              // a.dropdown-item(href=`/fr${uri}`) Français
-              a.dropdown-item(href=`/de${uri}`) Deutsch
-              // a.dropdown-item(href=`/it${uri}`) Italiano
-              // a.dropdown-item(href=`/es${uri}`) Español
-              // a.dropdown-item(href=`/sv${uri}`) Svenska
+              if isInArray(renderLang, 'da')
+                a.dropdown-item(href=`/da${uri}`) Dansk
+              if isInArray(renderLang, 'nl')
+                a.dropdown-item(href=`/nl${uri}`) Nederlands
+              if isInArray(renderLang, 'en')
+                a.dropdown-item(href=`${uri}`) English
+              if isInArray(renderLang, 'fi')
+                a.dropdown-item(href=`/fi${uri}`) Suomi
+              if isInArray(renderLang, 'fr')
+                a.dropdown-item(href=`/fr${uri}`) Français
+              if isInArray(renderLang, 'de')
+                a.dropdown-item(href=`/de${uri}`) Deutsch
+              if isInArray(renderLang, 'it')
+                a.dropdown-item(href=`/it${uri}`) Italiano
+              if isInArray(renderLang, 'es')
+                a.dropdown-item(href=`/es${uri}`) Español
+              if isInArray(renderLang, 'sv')
+                a.dropdown-item(href=`/sv${uri}`) Svenska

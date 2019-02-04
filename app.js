@@ -80,7 +80,8 @@ const renderPug = (file, filepath, basepath, includePath, relativePath) => {
       tf: tfooter,
       basedir: includePath,
       sd: sd,
-      pretty: true
+      pretty: true,
+      renderLang: renderLang
     });
 
     let basePathExplode = includePath.split(path.sep);
