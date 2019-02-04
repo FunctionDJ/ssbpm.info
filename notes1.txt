@@ -8,7 +8,7 @@ Finding out the region
     - Yes:
       > Hackless
     - No:
-      > Letter / Bannerbomb
+      > Letter / BannerBomb
   - No:
     8GB+ USB device?
     - Yes:
