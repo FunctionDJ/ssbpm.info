@@ -7,6 +7,7 @@
 mixin body
   #pagecontent.p-3(style='flex:1')
     .w-100
+      h3.text-center!= sd(t.title)
       a(href= lpath + uri) ← Go back to start
       #guide-window.card
         .card-body
@@ -23,8 +24,8 @@ mixin body
                 != sd(t.cards.start.choices['sd-check'])
               br
               label.radio-input(for="st-3")
-                input(type="radio" id="st-3" value="str2hax" name="#start")
-                != sd(t.cards.start.choices.str2hax)
+                input(type="radio" id="st-3" value="str2hax-1" name="#start")
+                != sd(t.cards.start.choices["str2hax-1"])
               br
 
           a#prevPageButton.btn.btn-primary.disabled(href="#start" onclick="prevPageButton.load()") Previous
