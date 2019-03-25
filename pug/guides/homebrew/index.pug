@@ -15,21 +15,9 @@ mixin body
             #start
               h5#card-title!= sd(t.cards.start.title)
               p.card-text!= sd(t.cards.start.text)
-              label.radio-input(for="st-1")
-                input(type="radio" id="st-1" value="bomb" name="#start")
-                != sd(t.cards.start.choices.bomb)
-              br
-              label.radio-input(for="st-2")
-                input(type="radio" id="st-2" value="sd-check" name="#start")
-                != sd(t.cards.start.choices['sd-check'])
-              br
-              label.radio-input(for="st-3")
-                input(type="radio" id="st-3" value="str2hax-1" name="#start")
-                != sd(t.cards.start.choices["str2hax-1"])
-              br
 
           a#prevPageButton.btn.btn-primary.disabled(href="#start" onclick="prevPageButton.load()") Previous
-          a#nextPageButton.btn.btn-primary.float-right.disabled(href="" onclick="nextPageButton.load()") Next
+          a#nextPageButton.btn.btn-primary.float-right(href="#" onclick="nextPageButton.load()") Next
 
           - var tPlain = JSON.stringify(t.cards)
           script

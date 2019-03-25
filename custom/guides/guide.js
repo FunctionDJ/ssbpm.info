@@ -26,7 +26,7 @@ var currentCard = {
 
 // next button object
 const nextPageButton = {
-  nextPage: '',
+  nextPage: 'version',
   variable: "heyaaa",
   button: $('#nextPageButton'),
   setNext: function(nextPage) {
@@ -41,6 +41,7 @@ const nextPageButton = {
     this.button.addClass("disabled");
   },
   load: function() {
+    this.disable();
     prevPageButton.addPrev(currentCard.id);
     if (cards[this.nextPage] != null) {
       cards[this.nextPage].show();
@@ -48,7 +49,6 @@ const nextPageButton = {
       alert(`Woah there cowboy!\nSorry, something went wrong. Attempted to load\n    '${this.nextPage}'\nbut it doesn't exit. Please contact someone from\n    http://ssbpm.info/contact/\nand give them this error message. THANK YOU.`)
       throw `Error: The request card '${this.nextPage}' doesn't exist.`;
     }
-    this.disable();
   }
 }
 

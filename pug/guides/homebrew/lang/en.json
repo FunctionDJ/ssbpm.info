@@ -2,30 +2,25 @@
   "title": "Homebrewing your Wii",
   "cards": {
     "start": {
-      "title": "Step 1 - Method of choice",
-      "text": "There are many ways you can install the Homebrew channel. It requires you to use any of the numerous exploits that the Wii has. All of these exploits either require an SD card or a Wii connected to the internet. We recommend using LetterBomb or BannerBomb (very similar, but for 4.3 and 4.0-4.2 respectively) since it's very reliable and using an SD card is also the easiest way of running Project M. ",
-      "choices": {
-        "bomb": "I got a Wii-compatible SD card",
-        "sd-check": "I don't know if my SD card is compatible",
-        "str2hax-1": "I want to use the internet-based exploit"
-      }
+      "title": "Step 1 - Introduction",
+      "text": "This guide will show you how you can \"homebrew\" your Wii. This will allow you to launch small programs that we'll use to install and run Project M from your SD card very easily without needing to use an exploit every time.   \nHowever to get to that part, we need to use one of these exploits in the first place. Luckily there a bunch of options listed here for every Wii system version and there a lot more out there as well."
     },
     "sd-check": {
       "title": "Step 1b - SD compatibility",
       "text": "Even though the Wii on version 4.0 and higher supports the vast majority of SD cards, including a lot of Micro-SD cards with an adapter, you can easily check if your Wii supports your SD card.\nSimply format your SD card as FAT32, go to the Wii home menu and insert the SD card. If the SD card logo in the bottom left lights up blue, your card is compatible.\n\nDon't know which SD card to use / buy? Generally people have had most success with SDHC cards from 8 up to 32GB, like [these](https://www.amazon.com/SanDisk-Class-SDHC-Flash-Memory/dp/B00FM5E1EY/ref=sr_1_3?s=electronics&ie=UTF8&qid=1545947891&sr=1-3&keywords=sd+card+8gb) (not affiliate link, not sponsored by amazon.com).",
       "choices": {
-        "bomb": "My SD card is getting detected",
+        "version": "My SD card is getting detected",
         "str2hax-1": "I don't want to use an SD card right now"
       }
     },
-    "bomb": {
-      "title": "Step 2.1 (SD) - Finding your Wii's system version",
+    "version": {
+      "title": "Step 2 - Finding your Wii's system version",
       "text": "The easiest SD-based exploits are **LetterBomb for 4.3** and **BannerBomb for 4.2** (BannerBomb v2) and **3.0-4.1** (BannerBomb v1), since they don't require a game exploit like *Twilight Hack* or *SmashStack*.   \nPlease go into your settings and check what system version your Wii has.",
       "choices": {
         "letterbomb-1": "4.3",
         "bannerbomb-v2": "4.2",
         "bannerbomb-v1": "3.0-4.1",
-        "disc-exploits": "Below 3.0"
+        "smashstack-1": "Below 3.0"
       }
     },
     "letterbomb-1": {
@@ -56,6 +51,14 @@
       "title": "Step 2.2 (BannerBomb) - BannerBomb for Wii system version 3.0 up to 4.1",
       "text": "Start with a clean, FAT32 formatted SD card.   \n1. Download [this file]().\n2. Put it in the root of your SD card."
     },
+    "smashstack-1": {
+      "title": "Using your Brawl copy for installing the Homebrew channel",
+      "text": "placeholder"
+    },
+    "smashstack-2": {
+      "title": "Smashstack 2 title",
+      "text": "placeholder"
+    },
     "wilbrand": {
       "title": "Step 2.3b (LetterBomb) - Using Wilbrand instead of [please.hackmii.com](https://please.hackmii.com)",
       "text": "Oh no! [please.hackmii.com](http://please.hackmii.com) is down? Don't worry, there's another way without the need of a specific game.   \n*Wilbrand* does essentially the same as using the website.   \n1. Download *Wilbrand*. ([GitHub](https://github.com/giantpune/mailboxbomb)) ([Direct Windows Download](https://github.com/giantpune/mailboxbomb/blob/master/Wilbrand.exe?raw=true))\n2. Open a command window where the executable file lies. On Windows you can Shift + Rightclick in the explorer window and either start CMD or PowerShell.\n3. Type in the command with this syntax: `Wilbrand <MAC> <Date> <System-Version> <SD-Root>`.   \nExample: `Wilbrand Wilbrand.exe 12-34-56-78-90-12 04/29/2019 4.3e G:`"
@@ -70,7 +73,7 @@
     },
     "hackmii-1": {
       "title": "Step 3.1: Installing the Homebrew channel",
-      "text": "The HackMii installer always starts with a 30 second disclaimer and warning screen about scam dangers.   \n   \n**If you don't see this disclaimer and can't get into the Hackmii installer, go one page back and check the source at the bottom of the card or get in [contact](/contact/) to get help.**   \n   \nDon't worry, just wait the 30 seconds and then press 1 on your Wiimote to continue. Now you should be in the Hackmii installer menu.\n1. Choose **Continue**.\n2. Choose **Install The Homebrew Channel**.\n3. Select **Yes, continue**.\n4. After a moment it should say **SUCCESS** in green, press **Continue**.   \nYou're now back at the main menu."
+      "text": "The HackMii installer always starts with a 30 second disclaimer and warning screen about scam dangers.   \nDon't worry, just wait the 30 seconds and then press 1 on your Wiimote to continue. Now you should be in the Hackmii installer menu.\n1. Choose **Continue**.\n2. Choose **Install The Homebrew Channel**.\n3. Select **Yes, continue**.\n4. After a moment it should say **SUCCESS** in green, press **Continue**.   \nYou're now back at the main menu."
     },
     "hackmii-2": {
       "title": "Step 3.2 (optional): Installing BootMii (requires SD card)",

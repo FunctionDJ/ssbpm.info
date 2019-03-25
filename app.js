@@ -25,7 +25,7 @@ fse.copySync('./custom/', './html/', {
 var showdown = require('./custom/modules/custom-showdown.js'),
     converter = new showdown.Converter();
 
-const renderLang = ['en', 'de'];
+const renderLang = ['en'];
 
 const renderPug = (file, filepath, basepath, includePath, relativePath) => {
   renderLang.forEach((lcode) => {
