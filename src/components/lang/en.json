@@ -1,0 +1,16 @@
+{
+  "header": {
+    "title": "ssbpm.info",
+    "nav": {
+      "home": "Home",
+      "guides": "Guides",
+      "faq": "F.A.Q.",
+      "wiki": "Wiki",
+      "contact": "Contact",
+      "about": "About"
+    }
+  },
+  "footer": {
+    "copyright": "&copy;2019 waffeln"
+  }
+}
